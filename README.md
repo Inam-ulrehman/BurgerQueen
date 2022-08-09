@@ -4,11 +4,8 @@
 
 [EXPRESS ROUTER, NODEJS, REACT,REDUX,ROUTER6,ES6,Rest Api,material ui,Farma motion , animated.style, Register member, ]..... Might add more.
 
-Uploaded api
-
-https://saniaopticalbyinam.herokuapp.com/api/v1/products/static
-
 Site in action in production =
+https://burgerqueenbyinam.netlify.app/
 
 ==============
 
