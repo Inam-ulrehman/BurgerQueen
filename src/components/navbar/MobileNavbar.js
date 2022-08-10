@@ -87,7 +87,7 @@ const MobileNavbarWrapper = styled.nav`
     transition: var(--transition);
     height: 0px;
     transition: var(--transition);
-    background-color: var(--white);
+    background-color: var(--primary-9);
     overflow: hidden;
     a {
       display: block;

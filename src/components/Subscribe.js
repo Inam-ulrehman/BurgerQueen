@@ -20,7 +20,7 @@ const Subscribe = () => {
 }
 const Wrapper = styled.div`
   max-width: var(--mobile-width);
-  background-color: var(--white);
+  background-color: var(--primary-10);
   border-radius: var(--radius);
   box-shadow: var(--shadow-1);
   p,
@@ -33,6 +33,7 @@ const Wrapper = styled.div`
     input {
       padding: 5px;
       margin-right: 10px;
+      background-color: var(--grey-1);
     }
   }
 `

@@ -1,28 +1,37 @@
 import React from 'react'
-import { FaRegCopyright } from 'react-icons/fa'
 import styled from 'styled-components'
-
-import FooterPageOne from './FooterPageOne'
+import Logo from '../Logo'
+import SocialMedia from '../SocialMedia'
+import Subscribe from '../Subscribe'
+import Address from '../Address'
+import CopyRight from '../CopyRight'
 
 const Footer = () => {
   return (
     <Wrapper>
-      <FooterPageOne />
-
-      <div className='footer-box'>
-        <FaRegCopyright />
-        Copyright {new Date().getFullYear()} INAM Web Solutions. All Rights
-        Reserved. Web Design and Content Management by INAM Web Solutions.
+      <div className='logo-holder'>
+        <Logo />
       </div>
+      <div className='social-media'>
+        <Subscribe />
+        <SocialMedia />
+        <Address />
+      </div>
+      <CopyRight />
     </Wrapper>
   )
 }
 
-const Wrapper = styled.footer`
-  .footer-box {
+const Wrapper = styled.div`
+  background-color: var(--primary-1);
+  .logo-holder {
     text-align: center;
-    background-color: var(--grey-3);
-    padding: 2rem;
+    margin: 1rem auto;
+  }
+  .social-media {
+    div {
+      margin: 1rem auto;
+    }
   }
 `
 

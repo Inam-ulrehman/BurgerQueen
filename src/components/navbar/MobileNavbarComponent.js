@@ -20,14 +20,16 @@ const Wrapper = styled.li`
   transition: var(--transition);
   color: var(--grey-5);
   a {
-    color: var(--grey-5);
+    color: var(--grey-9);
+    padding: 5px;
+    border-radius: var(--radius);
   }
   :hover {
     padding-left: 1.4rem;
-    background: var(--primary-5);
     color: var(--white);
     a {
       color: var(--white);
+      background: var(--primary-5);
     }
   }
   display: flex;

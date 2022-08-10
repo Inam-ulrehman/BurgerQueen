@@ -25,7 +25,8 @@ const SocialMedia = () => {
 const Wrapper = styled.div`
   max-width: var(--mobile-width);
   box-shadow: var(--shadow-1);
-  background-color: var(--white);
+  background-color: var(--primary-10);
+  border-radius: var(--radius);
   padding: 0 1rem;
   a {
     font-size: 1.2rem;

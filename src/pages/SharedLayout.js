@@ -12,8 +12,8 @@ const SharedLayout = () => {
       <MobileNavbar />
       <section className='section'>
         <Outlet />
-        <Footer />
       </section>
+      <Footer />
     </main>
   )
 }
