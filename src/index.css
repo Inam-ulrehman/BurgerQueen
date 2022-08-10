@@ -45,13 +45,15 @@ html {
   --small-text: 0.875rem;
   --extra-small-text: 0.7em;
   /* rest of the vars */
-  --backgroundColor: var(--var-grey-9);
+  --backgroundColor: var(--grey-1);
   --textColor: var(--grey-9);
   --radius: 0.25rem;
   --letterSpacing: 1px;
   --transition: 0.3s ease-in-out all;
   --max-width: 1120px;
   --fixed-width: 600px;
+  --mobile-width: 350px;
+  --line-right: linear-gradient(304deg, #00b4d8 49%, #ffffff 49%, #ffffff 80%);
 
   /* box shadow*/
   --shadow-1: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
@@ -277,7 +279,7 @@ ul {
 }
 
 .active {
-  /* color: var(--primary-5); */
+  color: var(--primary-5);
 }
 .hero-image {
   /* background-image: url('../src/images/hero.jpg'); */

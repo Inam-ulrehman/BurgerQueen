@@ -68,7 +68,7 @@ export const socialIcons = [
   },
   {
     id: 5,
-    path: 'https://instragram.com',
+    path: 'https://www.instagram.com/',
     target: '_blank',
     rel: 'noreferrer',
     icon: <FaInstagramSquare />,

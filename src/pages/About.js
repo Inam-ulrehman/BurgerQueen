@@ -1,7 +1,6 @@
 import { React, useEffect } from 'react'
 import styled from 'styled-components'
-
-import SocialMedia from '../components/SocialMedia'
+import Subscribe from '../components/Subscribe'
 
 const About = () => {
   useEffect(() => {
@@ -10,9 +9,10 @@ const About = () => {
   return (
     <Wrapper>
       <h1>Component</h1>
+
       <div>
-        <SocialMedia />
         <div className='style'></div>
+        <Subscribe />
       </div>
     </Wrapper>
   )
