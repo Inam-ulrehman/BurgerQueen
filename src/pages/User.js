@@ -1,10 +1,8 @@
 import React from 'react'
-
 import styled from 'styled-components'
+import UserInputHolder from '../components/InputHolder/UserInputHolder'
 
-import FormInputHolder from '../components/LandingPageHolders/FormInputHolder'
-
-const LandingPage = () => {
+const User = () => {
   return (
     <Wrapper className='api-box'>
       <div className='logo-holder'>
@@ -14,7 +12,7 @@ const LandingPage = () => {
       </div>
       <div className='title-underline underline-create'></div>
       {/* Login/Signup */}
-      <FormInputHolder />
+      <UserInputHolder />
     </Wrapper>
   )
 }
@@ -34,4 +32,5 @@ const Wrapper = styled.div`
     color: var(--primary-5);
   }
 `
-export default LandingPage
+
+export default User

@@ -1,10 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
 import Logo from '../Logo'
-import SocialMedia from '../SocialMedia'
-import Subscribe from '../Subscribe'
-import Address from '../Address'
-import CopyRight from '../CopyRight'
+import Address from './Address'
+import CopyRight from './CopyRight'
+import SocialMedia from './SocialMedia'
+import Subscribe from './Subscribe'
 
 const Footer = () => {
   return (
@@ -21,8 +21,7 @@ const Footer = () => {
     </Wrapper>
   )
 }
-
-const Wrapper = styled.div`
+const Wrapper = styled.footer`
   background-color: var(--primary-1);
   .logo-holder {
     text-align: center;
@@ -34,5 +33,4 @@ const Wrapper = styled.div`
     }
   }
 `
-
 export default Footer

@@ -1,21 +1,23 @@
-import Cart from './Cart'
 import Contact from './Contact'
-import Dashboard from './Dashboard'
 import ErrorPage from './ErrorPage'
 import LandingPage from './LandingPage'
 import Products from './Products'
+import ProductsSharedLayout from './ProductsSharedLayout'
 import SharedLayout from './SharedLayout'
-import SingleProduct from './SingleProduct'
+import SingleProducts from './SingleProducts'
+import TypeProducts from './TypeProducts'
+import Reviews from './Reviews'
 import User from './User'
 
 export {
-  Cart,
-  User,
-  Products,
-  SingleProduct,
   SharedLayout,
   LandingPage,
   ErrorPage,
   Contact,
-  Dashboard,
+  ProductsSharedLayout,
+  Products,
+  SingleProducts,
+  TypeProducts,
+  Reviews,
+  User,
 }

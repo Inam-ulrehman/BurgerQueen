@@ -1,7 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
-import Footer from '../components/Footer/Footer'
 
 import error from '../images/pageNotFound.svg'
 
@@ -16,8 +15,6 @@ const ErrorPage = () => {
       <Link className='btn' to='/'>
         Home
       </Link>
-
-      <Footer />
     </Wrapper>
   )
 }

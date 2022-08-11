@@ -1,12 +1,3 @@
-### Commerce site fully functional . MERN STACK
-
-1. Technologies used in this projects .
-
-[EXPRESS ROUTER, NODEJS, REACT,REDUX,ROUTER6,ES6,Rest Api,material ui,Farma motion , animated.style, Register member, ]..... Might add more.
-
-Site in action in production =
-https://burgerqueenbyinam.netlify.app/
-
-======================
-
-Concept this is going to be a BurgerShop with full of ReuseAble Components
+1. update logo and site text InamWebSolutions.
+2. Logo either pick one or create one as component to use in different places.
+3. update pages you are going to show in menu. React Router 6.

@@ -1,32 +1,28 @@
 import React from 'react'
-import { useEffect } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
-import { getAllProductsThunk } from './features/products/productsSlice'
+import ProtectedRoute from './components/ProtectedRoute'
 import {
   SharedLayout,
   LandingPage,
   ErrorPage,
   Contact,
-  Cart,
-  User,
+  ProductsSharedLayout,
   Products,
-  SingleProduct,
-  Dashboard,
+  SingleProducts,
+  TypeProducts,
+  Reviews,
+  User,
 } from './pages'
-import { useDispatch } from 'react-redux'
-import { ProtectedRoute } from './components'
-import Payment from './components/Dashboard.js/Payment'
-
-import Orders from './components/Dashboard.js/Orders'
+import {
+  Dashboard,
+  Orders,
+  Profile,
+  SharedDashboardLayout,
+} from './pages/Dashboard'
 
 const App = () => {
-  const dispatch = useDispatch()
-  useEffect(() => {
-    dispatch(getAllProductsThunk())
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [])
   return (
     <BrowserRouter>
       <Routes>
@@ -34,22 +30,32 @@ const App = () => {
           <Route index element={<LandingPage />} />
           <Route path='*' element={<ErrorPage />} />
           <Route path='contact' element={<Contact />} />
-          <Route path='cart' element={<Cart />} />
           <Route path='user' element={<User />} />
-          <Route path='Products' element={<Products />} />
-          <Route path='/Products/:Id' element={<SingleProduct />} />
+          <Route path='/products' element={<ProductsSharedLayout />}>
+            <Route index element={<Products />} />
+            <Route path='/products/:type' element={<TypeProducts />} />
+            <Route
+              path='/products/:type/:singleProduct'
+              element={<SingleProducts />}
+            />
+            <Route
+              path='/products/:type/:singleProduct/:reviews'
+              element={<Reviews />}
+            />
+          </Route>
         </Route>
+        {/* Dashboard Route start here */}
         <Route
           path='/dashboard'
           element={
             <ProtectedRoute>
-              <Dashboard />
+              <SharedDashboardLayout />
             </ProtectedRoute>
           }
         >
-          <Route index element={<Payment />} />
-
+          <Route index element={<Dashboard />} />
           <Route path='orders' element={<Orders />} />
+          <Route path='profile' element={<Profile />} />
         </Route>
       </Routes>
       <ToastContainer />
