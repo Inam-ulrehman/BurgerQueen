@@ -1,8 +1,11 @@
 import React from 'react'
+import { useEffect } from 'react'
+import { useDispatch } from 'react-redux'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 import ProtectedRoute from './components/ProtectedRoute'
+import { getAllProductsThunk } from './features/products/productSlice'
 import {
   SharedLayout,
   LandingPage,
@@ -23,6 +26,11 @@ import {
 } from './pages/Dashboard'
 
 const App = () => {
+  const dispatch = useDispatch()
+  useEffect(() => {
+    dispatch(getAllProductsThunk())
+    // eslint-disable-next-line
+  }, [])
   return (
     <BrowserRouter>
       <Routes>
