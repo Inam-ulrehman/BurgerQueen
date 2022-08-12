@@ -1,10 +1,13 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+
+import { Link, useParams } from 'react-router-dom'
 
 const Reviews = () => {
+  const params = useParams()
+  console.log(params)
   return (
     <div>
-      <h1>Review</h1>
+      <h1>Review page</h1>
       <Link className='btn' to='/'>
         Home
       </Link>

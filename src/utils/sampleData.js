@@ -1,6 +1,6 @@
 export const products = [
   {
-    id: '1',
+    id: '13adsfsadg',
     category: 'breakfast',
     image:
       'https://res.cloudinary.com/inam6530/image/upload/v1660244805/BurgerQueen/mcdonalds-egg-mcmuffin-blt_dmtflt.jpg',
@@ -18,7 +18,7 @@ export const products = [
     price: '4000',
   },
   {
-    id: '2',
+    id: '23f3ff3fdf',
     category: 'breakfast',
     image:
       'https://res.cloudinary.com/inam6530/image/upload/v1660246332/BurgerQueen/mcdonalds-chicken-mcmuffin_svtcuv.jpg',
@@ -36,7 +36,7 @@ export const products = [
     price: '3000',
   },
   {
-    id: '3',
+    id: '3errsf',
     category: 'breakfast',
     image:
       'https://res.cloudinary.com/inam6530/image/upload/v1660246590/BurgerQueen/mcdonalds-spicy-habanero-bacon-egg-mcmuffin_1_hidja6.jpg',
@@ -54,7 +54,7 @@ export const products = [
     price: '5000',
   },
   {
-    id: '4',
+    id: '4sdge2asdf3',
     category: 'breakfast',
     image:
       'https://res.cloudinary.com/inam6530/image/upload/v1660246681/BurgerQueen/mcdonalds-spicy-habanero-chicken-mcmuffin_gxvajk.jpg',
@@ -72,7 +72,7 @@ export const products = [
     price: '4000',
   },
   {
-    id: '5',
+    id: '53hdfasdfsdaf',
     category: 'breakfast',
     image:
       'https://res.cloudinary.com/inam6530/image/upload/v1660246763/BurgerQueen/mcdonalds-egg-mcmuffin_onjrmf.jpg',
@@ -90,7 +90,7 @@ export const products = [
     price: '2000',
   },
   {
-    id: '6',
+    id: '34fdghdsdafdsa',
     category: 'breakfast',
     image:
       'https://res.cloudinary.com/inam6530/image/upload/v1660247479/BurgerQueen/mcdonalds-sausage-n-egg-mcmuffin_jwfaqo.jpg',
@@ -107,7 +107,7 @@ export const products = [
     price: '6000',
   },
   {
-    id: '7',
+    id: '2cbcxb7sdfdsaf',
     category: 'breakfast',
     image:
       'https://res.cloudinary.com/inam6530/image/upload/v1660247585/BurgerQueen/mcdonalds-bacon-n-egg-bagel-regular_azbsl1.jpg',
@@ -125,7 +125,7 @@ export const products = [
     price: '7000',
   },
   {
-    id: '8',
+    id: '8sfdgserdsfasdft',
     category: 'breakfast',
     image:
       'https://res.cloudinary.com/inam6530/image/upload/v1660247648/BurgerQueen/mcdonalds-egg-blt-bagel-everything_jocyan.jpg',
@@ -143,7 +143,7 @@ export const products = [
     price: '7000',
   },
   {
-    id: '9',
+    id: 'sfge349asdfdsf',
     category: 'breakfast',
     image:
       'https://res.cloudinary.com/inam6530/image/upload/v1660247907/BurgerQueen/mcdonalds-sesame-bagel-with-creamcheese_qmleyb.jpg',
@@ -161,7 +161,7 @@ export const products = [
     price: '4000',
   },
   {
-    id: '10',
+    id: '1dfgdfqfgs0asdfsdf',
     category: 'breakfast',
     image:
       'https://res.cloudinary.com/inam6530/image/upload/v1660247977/BurgerQueen/mcdonalds-sesame-bagel-with-butter_mxbdmz.jpg',
@@ -178,7 +178,7 @@ export const products = [
     price: '2000',
   },
   {
-    id: '11',
+    id: '1sfg1asdfsdfa',
     category: 'breakfast',
     image:
       'https://res.cloudinary.com/inam6530/image/upload/v1660248056/BurgerQueen/mcdonalds-everything-bagel-with-butter_dfejak.jpg',
@@ -196,7 +196,7 @@ export const products = [
     price: '4000',
   },
   {
-    id: '12',
+    id: 'dfsdafsdfg2f',
     category: 'breakfast',
     image:
       'https://res.cloudinary.com/inam6530/image/upload/v1660248130/BurgerQueen/mcdonalds-sausage-mcmuffin_qrrarf.jpg',
@@ -214,7 +214,7 @@ export const products = [
     price: '3000',
   },
   {
-    id: '14',
+    id: '14ssdafsadfdf',
     category: 'beef',
     image:
       'https://res.cloudinary.com/inam6530/image/upload/v1660248487/BurgerQueen/mcdonalds-grand-big-mac_dpaafr.jpg',
@@ -232,7 +232,7 @@ export const products = [
     price: '8000',
   },
   {
-    id: '14',
+    id: '14fse3dasfdsaf4',
     category: 'beef',
     image:
       'https://res.cloudinary.com/inam6530/image/upload/v1660248582/BurgerQueen/mcdonalds-grand-big-mac-bacon_nszzbz.jpg',
@@ -250,7 +250,7 @@ export const products = [
     price: '9000',
   },
   {
-    id: '14',
+    id: '143244sdafdsaf34',
     category: 'beef',
     image:
       'https://res.cloudinary.com/inam6530/image/upload/v1660248732/BurgerQueen/mcdonalds-big-mac_abjjbu.jpg',
@@ -268,7 +268,7 @@ export const products = [
     price: '8999',
   },
   {
-    id: '14',
+    id: '1dfg3adsfdfs4',
     category: 'beef',
     image:
       'https://res.cloudinary.com/inam6530/image/upload/v1660248836/BurgerQueen/mcdonalds-double-big-mac_nkrjfn.jpg',
@@ -286,7 +286,7 @@ export const products = [
     price: '8000',
   },
   {
-    id: '14',
+    id: '14sdfdsafasdfg3',
     category: 'beef',
     image:
       'https://res.cloudinary.com/inam6530/image/upload/v1660248836/BurgerQueen/mcdonalds-double-big-mac_nkrjfn.jpg',
@@ -304,7 +304,7 @@ export const products = [
     price: '4000',
   },
   {
-    id: '14',
+    id: '1sadfsdaf4',
     category: 'beef',
     image:
       'https://res.cloudinary.com/inam6530/image/upload/v1660248968/BurgerQueen/mcdonalds-mcdouble_vxlfek.jpg',
@@ -322,7 +322,7 @@ export const products = [
     price: '8000',
   },
   {
-    id: '14',
+    id: '1sdfsdafg34',
     category: 'beef',
     image:
       'https://res.cloudinary.com/inam6530/image/upload/v1660248487/BurgerQueen/mcdonalds-grand-big-mac_dpaafr.jpg',
@@ -340,7 +340,7 @@ export const products = [
     price: '8000',
   },
   {
-    id: '14',
+    id: '14sdfadsfsdag3',
     category: 'beef',
     image:
       'https://res.cloudinary.com/inam6530/image/upload/v1660248487/BurgerQueen/mcdonalds-grand-big-mac_dpaafr.jpg',
@@ -358,7 +358,7 @@ export const products = [
     price: '8000',
   },
   {
-    id: '14',
+    id: '1dsfg323sdaf34',
     category: 'beef',
     image:
       'https://res.cloudinary.com/inam6530/image/upload/v1660248487/BurgerQueen/mcdonalds-grand-big-mac_dpaafr.jpg',
@@ -376,7 +376,7 @@ export const products = [
     price: '8000',
   },
   {
-    id: '14',
+    id: 'sfgdfsdafg314',
     category: 'beef',
     image:
       'https://res.cloudinary.com/inam6530/image/upload/v1660249113/BurgerQueen/mcdonalds-double-cheeseburger_w97sg6.jpg',
@@ -394,7 +394,7 @@ export const products = [
     price: '8000',
   },
   {
-    id: '14',
+    id: '3fgsdsdfasfg14',
     category: 'beef',
     image:
       'https://res.cloudinary.com/inam6530/image/upload/v1660249164/BurgerQueen/mcdonalds-quarter-pounder-cheese_vlumik.jpg',
@@ -412,7 +412,7 @@ export const products = [
     price: '8000',
   },
   {
-    id: '14',
+    id: '1dfgdasdfdsfg34',
     category: 'beef',
     image:
       'https://res.cloudinary.com/inam6530/image/upload/v1660249229/BurgerQueen/mcdonalds-quarter-pounder-blt_ivbh48.jpg',
@@ -430,7 +430,7 @@ export const products = [
     price: '8000',
   },
   {
-    id: '15',
+    id: 'sdfgdsdafsadffg315',
     category: 'chicken',
     image:
       'https://res.cloudinary.com/inam6530/image/upload/v1660249431/BurgerQueen/mcdonalds-ranch-crispy-chicken-snackwrap_cegr08.jpg',
@@ -447,7 +447,7 @@ export const products = [
     price: '8000',
   },
   {
-    id: '15',
+    id: 'sdfgdgsadfasdf315',
     category: 'chicken',
     image:
       'https://res.cloudinary.com/inam6530/image/upload/v1660249728/BurgerQueen/chicken/mcdonalds-spicy-habanero-mcchicken_myuzfl.jpg',
@@ -464,7 +464,7 @@ export const products = [
     price: '6000',
   },
   {
-    id: '15',
+    id: 'dfgsfsdfaasddg315',
     category: 'chicken',
     image:
       'https://res.cloudinary.com/inam6530/image/upload/v1660249728/BurgerQueen/chicken/mcdonalds-spicy-szechuan-mcchicken_koicqm.jpg',
@@ -481,7 +481,7 @@ export const products = [
     price: '9000',
   },
   {
-    id: '15',
+    id: 'dfgsdfg31sadfdsaf5',
     category: 'chicken',
     image:
       'https://res.cloudinary.com/inam6530/image/upload/v1660249728/BurgerQueen/chicken/mcdonalds-spiciest-ghost-pepper-mcchicken_xfl8su.jpg',
@@ -498,7 +498,7 @@ export const products = [
     price: '8000',
   },
   {
-    id: '15',
+    id: 'sdsdafdsfasffgdg315',
     category: 'chicken',
     image:
       'https://res.cloudinary.com/inam6530/image/upload/v1660249727/BurgerQueen/chicken/mcdonalds-mcchicken_hh0ysy.jpg',
@@ -515,7 +515,7 @@ export const products = [
     price: '8000',
   },
   {
-    id: '15',
+    id: 'sdsdafsdffgsdg3215',
     category: 'chicken',
     image:
       'https://res.cloudinary.com/inam6530/image/upload/v1660249727/BurgerQueen/chicken/mcdonalds-chicken-mcgriddle_ls7cmy.jpg',
@@ -532,7 +532,7 @@ export const products = [
     price: '6000',
   },
   {
-    id: '15',
+    id: '1sdfgfasfsdafdg35',
     category: 'chicken',
     image:
       'https://res.cloudinary.com/inam6530/image/upload/v1660249727/BurgerQueen/chicken/mcdonalds-grilled-caesar-chicken-mcwrap_t0kuyz.jpg',
@@ -549,7 +549,7 @@ export const products = [
     price: '8000',
   },
   {
-    id: '15',
+    id: '1sdasdfsdfgdfghbbn5',
     category: 'chicken',
     image:
       'https://res.cloudinary.com/inam6530/image/upload/v1660249727/BurgerQueen/chicken/mcdonalds-crispy-caesar-chicken-mcwrap_n2cnnm.jpg',
@@ -566,7 +566,7 @@ export const products = [
     price: '8000',
   },
   {
-    id: '15',
+    id: '15sdfgasdfsdafsdfg3366',
     category: 'chicken',
     image:
       'https://res.cloudinary.com/inam6530/image/upload/v1660249431/BurgerQueen/mcdonalds-ranch-crispy-chicken-snackwrap_cegr08.jpg',
@@ -583,7 +583,7 @@ export const products = [
     price: '8000',
   },
   {
-    id: '15',
+    id: '1555asdfsfda5',
     category: 'chicken',
     image:
       'https://res.cloudinary.com/inam6530/image/upload/v1660249727/BurgerQueen/chicken/mcdonalds-crispy-caesar-chicken-mcwrap_n2cnnm.jpg',
@@ -600,7 +600,7 @@ export const products = [
     price: '8000',
   },
   {
-    id: '15',
+    id: 'aaaasdfsdf1aaa5',
     category: 'chicken',
     image:
       'https://res.cloudinary.com/inam6530/image/upload/v1660249727/BurgerQueen/chicken/mcdonalds-chicken-bacon-signature-mcwrap-grilled_tzwwlm.jpg',
@@ -617,7 +617,7 @@ export const products = [
     price: '5000',
   },
   {
-    id: '15',
+    id: '15asdfadgfssaf',
     category: 'chicken',
     image:
       'https://res.cloudinary.com/inam6530/image/upload/v1660249726/BurgerQueen/chicken/mcdonalds-blt-chicken-crispy_tmkedl.jpg',
@@ -634,7 +634,7 @@ export const products = [
     price: '8000',
   },
   {
-    id: '15',
+    id: 'dfsgsdsdaffg15',
     category: 'chicken',
     image:
       'https://res.cloudinary.com/inam6530/image/upload/v1660249726/BurgerQueen/chicken/mcdonalds-10-chicken-mcnuggets_oiabux.jpg',
@@ -652,7 +652,7 @@ export const products = [
   },
 
   {
-    id: '15',
+    id: '15sdsdafdsaffg343',
     category: 'chicken',
     image:
       'https://res.cloudinary.com/inam6530/image/upload/v1660249726/BurgerQueen/chicken/mcdonalds-10-chicken-mcnuggets_oiabux.jpg',
@@ -669,7 +669,7 @@ export const products = [
     price: '8000',
   },
   {
-    id: '16',
+    id: '1sfdfdasdffgsg4446',
     category: 'sandwiches',
     image:
       'https://res.cloudinary.com/inam6530/image/upload/v1660249431/BurgerQueen/mcdonalds-ranch-crispy-chicken-snackwrap_cegr08.jpg',
@@ -686,7 +686,7 @@ export const products = [
     price: '6999',
   },
   {
-    id: '16',
+    id: 'asdfsadf16f',
     category: 'sandwiches',
     image:
       'https://res.cloudinary.com/inam6530/image/upload/v1660250980/BurgerQueen/sandwiches-and-wrap/mcdonalds-double-filet-o-fish_eatuqx.jpg',
@@ -703,7 +703,7 @@ export const products = [
     price: '2999',
   },
   {
-    id: '16',
+    id: 'f16adssdaf',
     category: 'sandwiches',
     image:
       'https://res.cloudinary.com/inam6530/image/upload/v1660250981/BurgerQueen/sandwiches-and-wrap/mcdonalds-ranch-grilled-chicken-snackwrap_gwlcg4.jpg',
@@ -720,7 +720,7 @@ export const products = [
     price: '6999',
   },
   {
-    id: '16',
+    id: '16ggg',
     category: 'sandwiches',
     image:
       'https://res.cloudinary.com/inam6530/image/upload/v1660250981/BurgerQueen/sandwiches-and-wrap/mcdonalds-ranch-crispy-chicken-snackwrap_ovcogg.jpg',
@@ -737,7 +737,7 @@ export const products = [
     price: '6999',
   },
   {
-    id: '16',
+    id: '1fsdfsadfff6',
     category: 'sandwiches',
     image:
       'https://res.cloudinary.com/inam6530/image/upload/v1660250980/BurgerQueen/sandwiches-and-wrap/mcdonalds-crispy-caesar-chicken-mcwrap_nxqja6.jpg',
@@ -754,7 +754,7 @@ export const products = [
     price: '6999',
   },
   {
-    id: '16',
+    id: '1sssasdfsdfa6',
     category: 'sandwiches',
     image:
       'https://res.cloudinary.com/inam6530/image/upload/v1660250980/BurgerQueen/sandwiches-and-wrap/mcdonalds-grilled-caesar-chicken-mcwrap_cz4bsw.jpg',
@@ -771,7 +771,7 @@ export const products = [
     price: '6999',
   },
   {
-    id: '16',
+    id: '1xsdafsadfxx6',
     category: 'sandwiches',
     image:
       'https://res.cloudinary.com/inam6530/image/upload/v1660250980/BurgerQueen/sandwiches-and-wrap/mcdonalds-chicken-bacon-signature-mcwrap-grilled_yd0ejh.jpg',
@@ -788,7 +788,7 @@ export const products = [
     price: '6999',
   },
   {
-    id: '16',
+    id: '16basdfsdafbb',
     category: 'sandwiches',
     image:
       'https://res.cloudinary.com/inam6530/image/upload/v1660250980/BurgerQueen/sandwiches-and-wrap/mcdonalds-chicken-bacon-signature-mcwrap-crispy_fzoxey.jpg',
@@ -805,7 +805,7 @@ export const products = [
     price: '6999',
   },
   {
-    id: '16',
+    id: 'cvxvbcasdfsdf16',
     category: 'sandwiches',
     image:
       'https://res.cloudinary.com/inam6530/image/upload/v1660249431/BurgerQueen/mcdonalds-ranch-crispy-chicken-snackwrap_cegr08.jpg',
@@ -823,7 +823,7 @@ export const products = [
   },
 
   {
-    id: '16',
+    id: '1xbxcvsdafsafdb6',
     category: 'sandwiches',
     image:
       'https://res.cloudinary.com/inam6530/image/upload/v1660250980/BurgerQueen/sandwiches-and-wrap/mcdonalds-filet-o-fish_p3wyba.jpg',
@@ -840,7 +840,7 @@ export const products = [
     price: '6999',
   },
   {
-    id: '17',
+    id: '1xsadfsadfx7',
     category: 'snacks',
     image:
       'https://res.cloudinary.com/inam6530/image/upload/v1660251439/BurgerQueen/snacks/mcdonalds-sugar-kookie-minions_xq3xrw.jpg',
@@ -858,7 +858,7 @@ export const products = [
   },
 
   {
-    id: '17',
+    id: '1vcxsadfsdfabxcbd7',
     category: 'snacks',
     image:
       'https://res.cloudinary.com/inam6530/image/upload/v1660251439/BurgerQueen/snacks/mcdonalds-rmhc-chocolate-chunk-cookie_g6cbsk.jpg',
@@ -876,7 +876,7 @@ export const products = [
   },
 
   {
-    id: '17',
+    id: '17vcxsadfsadfbxcb',
     category: 'snacks',
     image:
       'https://res.cloudinary.com/inam6530/image/upload/v1660251439/BurgerQueen/snacks/mcdonalds-rmhc-brownie-cookie_r8mzrm.jpg',
@@ -894,7 +894,7 @@ export const products = [
   },
 
   {
-    id: '17',
+    id: 'xcvbsdafasdfcxb17',
     category: 'desserts',
     image:
       'https://res.cloudinary.com/inam6530/image/upload/v1660251808/BurgerQueen/snacks/mcdonalds-vanilla-milkshake_i75riz.jpg',
@@ -928,7 +928,7 @@ export const products = [
     price: '2999',
   },
   {
-    id: '17',
+    id: '13434asdfasdf5437',
     category: 'desserts',
     image:
       'https://res.cloudinary.com/inam6530/image/upload/v1660251808/BurgerQueen/snacks/mcdonalds-strawberry-milkshake_uzwlmv.jpg',
@@ -945,7 +945,7 @@ export const products = [
     price: '2999',
   },
   {
-    id: '17',
+    id: '1sfdgasdfsadfdfsg7',
     category: 'desserts',
     image:
       'https://res.cloudinary.com/inam6530/image/upload/v1660251808/BurgerQueen/snacks/mcdonalds-yogurt-tube_qwb9vx.jpg',
@@ -962,7 +962,7 @@ export const products = [
     price: '2999',
   },
   {
-    id: '17',
+    id: '17hssadsdfff',
     category: 'desserts',
     image:
       'https://res.cloudinary.com/inam6530/image/upload/v1660251808/BurgerQueen/snacks/mcdonalds-vanilla-cone_wv6eee.jpg',
@@ -979,7 +979,7 @@ export const products = [
     price: '2999',
   },
   {
-    id: '17',
+    id: '1sfdsdafasdfgsdfg7',
     category: 'drinks',
     image:
       'https://res.cloudinary.com/inam6530/image/upload/v1660252188/BurgerQueen/snacks/mcdonalds-coca-cola_jmqvf7.jpg',
@@ -996,7 +996,7 @@ export const products = [
     price: '2999',
   },
   {
-    id: '17',
+    id: '1dsaadsfdsfaf7',
     category: 'drinks',
     image:
       'https://res.cloudinary.com/inam6530/image/upload/v1660251808/BurgerQueen/snacks/mcdonalds-vanilla-cone_wv6eee.jpg',
@@ -1013,7 +1013,7 @@ export const products = [
     price: '2999',
   },
   {
-    id: '17',
+    id: 'sdfgasdfadsfsdg17',
     category: 'drinks',
     image:
       'https://res.cloudinary.com/inam6530/image/upload/v1660252188/BurgerQueen/snacks/mcdonalds-chocolate-milk_b3bgt2.jpg',
@@ -1030,7 +1030,7 @@ export const products = [
     price: '2999',
   },
   {
-    id: '17',
+    id: '1555asdfasdf57',
     category: 'drinks',
     image:
       'https://res.cloudinary.com/inam6530/image/upload/v1660252188/BurgerQueen/snacks/mcdonalds-white-milk_f6viwe.jpg',
@@ -1047,7 +1047,7 @@ export const products = [
     price: '2999',
   },
   {
-    id: '17',
+    id: '15asdfsdaf657',
     category: 'drinks',
     image:
       'https://res.cloudinary.com/inam6530/image/upload/v1660252188/BurgerQueen/snacks/mcdonalds-diet-coke_fdy9z8.jpg',
@@ -1064,7 +1064,7 @@ export const products = [
     price: '2999',
   },
   {
-    id: '17',
+    id: '175sadfdsa653',
     category: 'drinks',
     image:
       'https://res.cloudinary.com/inam6530/image/upload/v1660252188/BurgerQueen/snacks/mcdonalds-dasani-water_x2uhwt.jpg',
@@ -1082,7 +1082,7 @@ export const products = [
   },
 
   {
-    id: '17',
+    id: '17gfdhasdfsadfdhfd',
     category: 'drinks',
     image:
       'https://res.cloudinary.com/inam6530/image/upload/v1660252188/BurgerQueen/snacks/mcdonalds-diet-coke_fdy9z8.jpg',
@@ -1099,7 +1099,7 @@ export const products = [
     price: '2999',
   },
   {
-    id: '17',
+    id: '1743sdafas434fgdh',
     category: 'tea',
     image:
       'https://res.cloudinary.com/inam6530/image/upload/v1660252510/BurgerQueen/snacks/mcdonalds-espresso_pnqj5o.jpg',
@@ -1116,7 +1116,7 @@ export const products = [
     price: '2999',
   },
   {
-    id: '17',
+    id: '173343asdfasf4gfghydfh',
     category: 'tea',
     image:
       'https://res.cloudinary.com/inam6530/image/upload/v1660252510/BurgerQueen/snacks/mcdonalds-espresso_pnqj5o.jpg',
@@ -1133,7 +1133,7 @@ export const products = [
     price: '2999',
   },
   {
-    id: '17',
+    id: '17dfghdfagh34333',
     category: 'tea',
     image:
       'https://res.cloudinary.com/inam6530/image/upload/v1660252580/BurgerQueen/snacks/mcdonalds-americano_hhw054.jpg',
