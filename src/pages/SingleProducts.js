@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { useSelector } from 'react-redux'
+import { useEffect } from 'react'
 
 const SingleProducts = () => {
   const { products } = useSelector((state) => state.product)
@@ -9,6 +10,9 @@ const SingleProducts = () => {
     const filterResult = item._id === params.singleProduct
     return filterResult
   })
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: 'auto' })
+  }, [])
   return (
     <div>
       <h1>SingleProduct</h1>

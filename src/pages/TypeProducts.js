@@ -1,4 +1,4 @@
-import React from 'react'
+import { React, useEffect } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 
@@ -10,6 +10,9 @@ const TypeProducts = () => {
     const filterResult = item.category === params.type
     return filterResult
   })
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: 'auto' })
+  }, [])
   if (isLoading) {
     return (
       <div>
