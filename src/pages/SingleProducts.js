@@ -1,27 +1,14 @@
 import React from 'react'
 import { Link, useParams } from 'react-router-dom'
-import { products } from '../utils/sampleData'
+import { useSelector } from 'react-redux'
 
 const SingleProducts = () => {
+  const { products } = useSelector((state) => state.product)
   const params = useParams()
-
-  const filterObject = products.find((item) => {
-    const filterResult = item.id === params.singleProduct
+  const filterObject = products.filter((item) => {
+    const filterResult = item._id === params.singleProduct
     return filterResult
   })
-  const { Fat, image, name } = filterObject
-
-  //  Fiber,
-  //   Protein,
-  //   Sodium,
-  //   Sugar,
-  //   calories,
-  //   category,
-  //   description,
-  //   price,
-  //   title,
-  //    Carbohydrates,
-
   return (
     <div>
       <h1>SingleProduct</h1>
@@ -38,11 +25,15 @@ const SingleProducts = () => {
         Back to menu
       </Link>
       <div>
-        <h3>{name}</h3>
-        <h1>{Fat}</h1>
-        <div className='img-holder'>
-          <img src={image} alt='' className='img' />
-        </div>
+        {filterObject.map((item, index) => {
+          return (
+            <div key={index}>
+              <h1>{item.name}</h1>
+              <div className='img-container'></div>
+              <img src={item.image} alt='' className='img' />
+            </div>
+          )
+        })}
       </div>
     </div>
   )

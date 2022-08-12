@@ -3,7 +3,7 @@ import customFetchProducts from '../../utils/axios'
 
 const initialState = {
   products: [],
-  isLoading: true,
+  isLoading: false,
 }
 
 export const getAllProductsThunk = createAsyncThunk(
@@ -11,7 +11,7 @@ export const getAllProductsThunk = createAsyncThunk(
   async (_, thunkAPI) => {
     try {
       const resp = await customFetchProducts.get()
-      // console.log(resp.data)
+      console.log(resp.data)
       return resp.data
     } catch (error) {
       return thunkAPI.rejectWithValue(error.response.data)
@@ -33,6 +33,7 @@ const productSlice = createSlice({
     [getAllProductsThunk.fulfilled]: (state, { payload }) => {
       const { products } = payload
       state.products = products
+      state.isLoading = false
     },
     [getAllProductsThunk.rejected]: (state) => {
       state.isLoading = false
