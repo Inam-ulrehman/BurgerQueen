@@ -9,21 +9,18 @@ const SingleProducts = () => {
     const filterResult = item.id === params.singleProduct
     return filterResult
   })
-  const {
-    Carbohydrates,
-    Fat,
-    Fiber,
-    Protein,
-    Sodium,
-    Sugar,
-    calories,
-    category,
-    description,
-    image,
-    name,
-    price,
-    title,
-  } = filterObject
+  const { Fat, image, name } = filterObject
+
+  //  Fiber,
+  //   Protein,
+  //   Sodium,
+  //   Sugar,
+  //   calories,
+  //   category,
+  //   description,
+  //   price,
+  //   title,
+  //    Carbohydrates,
 
   return (
     <div>
