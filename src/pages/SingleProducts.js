@@ -31,7 +31,7 @@ const SingleProducts = () => {
       >
         Review's
       </Link>
-      <Link to='/dashboard' className='btn'>
+      <Link to='/cart' className='btn'>
         Add to cart
       </Link>
       <Link to='/products' className='btn'>

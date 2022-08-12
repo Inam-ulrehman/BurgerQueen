@@ -8,6 +8,7 @@ import SingleProducts from './SingleProducts'
 import TypeProducts from './TypeProducts'
 import Reviews from './Reviews'
 import User from './User'
+import Cart from './Cart'
 
 export {
   SharedLayout,
@@ -20,4 +21,5 @@ export {
   TypeProducts,
   Reviews,
   User,
+  Cart,
 }

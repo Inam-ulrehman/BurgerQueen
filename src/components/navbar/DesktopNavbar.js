@@ -2,7 +2,6 @@ import React from 'react'
 import { navbarData } from '../../utils/data'
 import DesktopNavbarComponent from './DesktopNavbarComponent'
 import Logo from '../Logo'
-import LogOut from './LogOut'
 import styled from 'styled-components'
 
 const DesktopNavbar = () => {
@@ -12,7 +11,6 @@ const DesktopNavbar = () => {
         <div className='logo-container'>
           <Logo />
         </div>
-        <LogOut />
         <div className='navbar'>
           <ul>
             {navbarData.map((item) => {

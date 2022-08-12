@@ -3,7 +3,6 @@ import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai'
 import { navbarData } from '../../utils/data'
 import MobileNavbarComponent from './MobileNavbarComponent'
 import Logo from '../Logo'
-import LogOut from './LogOut'
 import styled from 'styled-components'
 
 const MobileNavbar = () => {
@@ -28,7 +27,6 @@ const MobileNavbar = () => {
       <div className='container'>
         <div className='container-header'>
           <Logo />
-          <LogOut />
           {values ? (
             <AiOutlineClose onClick={handleMenu} className='menu-icon' />
           ) : (

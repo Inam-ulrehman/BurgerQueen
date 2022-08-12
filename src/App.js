@@ -17,10 +17,12 @@ import {
   TypeProducts,
   Reviews,
   User,
+  Cart,
 } from './pages'
 import {
   Dashboard,
   Orders,
+  Payment,
   Profile,
   SharedDashboardLayout,
 } from './pages/Dashboard'
@@ -39,6 +41,7 @@ const App = () => {
           <Route path='*' element={<ErrorPage />} />
           <Route path='contact' element={<Contact />} />
           <Route path='user' element={<User />} />
+          <Route path='cart' element={<Cart />} />
           <Route path='/products' element={<ProductsSharedLayout />}>
             <Route index element={<Products />} />
             <Route path='/products/:type' element={<TypeProducts />} />
@@ -64,6 +67,7 @@ const App = () => {
           <Route index element={<Dashboard />} />
           <Route path='orders' element={<Orders />} />
           <Route path='profile' element={<Profile />} />
+          <Route path='payment' element={<Payment />} />
         </Route>
       </Routes>
       <ToastContainer />

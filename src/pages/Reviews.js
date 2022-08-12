@@ -7,7 +7,7 @@ const Reviews = () => {
   console.log(params)
   return (
     <div>
-      <h1>Review page</h1>
+      <h1>Review</h1>
       <Link className='btn' to='/'>
         Home
       </Link>
