@@ -26,7 +26,7 @@ const Wrapper = styled.li`
       transition: var(--transition);
     }
   }
-  @media (min-width: 900px) {
+  @media (min-width: 780px) {
     a {
       padding: 12px !important;
     }

@@ -4,33 +4,44 @@ import DesktopNavbar from '../../components/navbar/DesktopNavbar'
 import MobileNavbar from '../../components/navbar/MobileNavbar'
 import { Link, Outlet } from 'react-router-dom'
 import LogOut from '../../components/Dashboard.js/LogOut'
+import styled from 'styled-components'
 
 const SharedDashboardLayout = () => {
   return (
-    <div>
+    <Wrapper>
       <MobileNavbar />
       <DesktopNavbar />
-      <h1>Shared layout</h1>
-      <div>
-        <Link to='/dashboard/profile' className='btn'>
-          Profile
-        </Link>
-        <Link to='/dashboard/payment' className='btn'>
-          payment
-        </Link>
-        <Link to='/dashboard' className='btn'>
-          Dashboard
-        </Link>
+      <div className='section'>
+        <h1>Shared layout</h1>
+        <div>
+          <Link to='/dashboard/profile' className='btn'>
+            Profile
+          </Link>
+          <Link to='/dashboard/payment' className='btn'>
+            payment
+          </Link>
+          <Link to='/dashboard' className='btn'>
+            Dashboard
+          </Link>
 
-        <Link to='/dashboard/orders' className='btn'>
-          Orders
-        </Link>
+          <Link to='/dashboard/orders' className='btn'>
+            Orders
+          </Link>
+        </div>
+        <LogOut />
+        <Outlet />
       </div>
-      <LogOut />
-      <Outlet />
       <Footer />
-    </div>
+    </Wrapper>
   )
 }
+
+const Wrapper = styled.section`
+  @media (max-width: 768px) {
+    .section {
+      margin-top: 3.7rem;
+    }
+  }
+`
 
 export default SharedDashboardLayout
