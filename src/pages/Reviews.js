@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import { React, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 
@@ -6,6 +7,7 @@ import styled from 'styled-components'
 import Stars from '../components/Cards/Stars'
 import {
   getReviewsInput,
+  getReviewThunk,
   postReviewThunk,
 } from '../features/reviews/reviewSlice'
 
@@ -15,6 +17,7 @@ const Reviews = () => {
   const dispatch = useDispatch()
   const params = useParams()
   const productId = params.singleProduct
+
   // Submit value
   const handleSubmit = (e) => {
     const { name, reviewInput } = review
@@ -32,6 +35,10 @@ const Reviews = () => {
     console.log(e.target)
     setStarValue(e.target.id)
   }
+  useEffect(() => {
+    dispatch(getReviewThunk(productId))
+    // eslint-disable-next-line
+  }, [])
   return (
     <Wrapper>
       <h1 className='title'>Review's</h1>

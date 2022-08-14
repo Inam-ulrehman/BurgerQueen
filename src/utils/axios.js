@@ -23,5 +23,10 @@ export const customFetchContact = axios.create({
 export const customFetchOrder = axios.create({
   baseURL: 'https://burgerqueenbyinam.herokuapp.com/api/v1',
 })
+//  Review Root URL - This is post read.
+
+export const customFetchReview = axios.create({
+  baseURL: 'https://burgerqueenbyinam.herokuapp.com/api/v1',
+})
 
 export default customFetchProducts

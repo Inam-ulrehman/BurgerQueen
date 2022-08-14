@@ -1,4 +1,5 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
+import { customFetchReview } from '../../utils/axios'
 
 const initialState = {
   name: '',
@@ -7,17 +8,36 @@ const initialState = {
   reviews: [],
   isLoading: false,
 }
-
+//==================== Post Reviews ============
 export const postReviewThunk = createAsyncThunk(
   'reviews/postReviewThunk',
   async (review, thunkAPI) => {
     console.log(review)
-    // try {
-    //   const resp = await customFetchReview.post('reviews',review)
-    //   return resp.data
-    // } catch (error) {
-    //   return thunkAPI.rejectWithValue(error.response.data)
-    // }
+    try {
+      const resp = await customFetchReview.post('reviews', review)
+      console.log(resp.data)
+      return resp.data
+    } catch (error) {
+      console.log(error.response)
+      return thunkAPI.rejectWithValue(error.response.data)
+    }
+  }
+)
+
+// ================Get Review=====================
+export const getReviewThunk = createAsyncThunk(
+  'reviews/getReviewThunk',
+  async (id, thunkAPI) => {
+    console.log(id)
+
+    try {
+      const resp = await customFetchReview.get('reviews', {})
+      console.log(resp.data)
+      return resp.data
+    } catch (error) {
+      console.log(error.response)
+      return thunkAPI.rejectWithValue(error.response.data)
+    }
   }
 )
 
@@ -39,6 +59,15 @@ const reviewSlice = createSlice({
       state.isLoading = false
     },
     [postReviewThunk.rejected]: (state) => {
+      state.isLoading = true
+    },
+    [getReviewThunk.pending]: (state) => {
+      state.isLoading = true
+    },
+    [getReviewThunk.fulfilled]: (state) => {
+      state.isLoading = false
+    },
+    [getReviewThunk.rejected]: (state) => {
       state.isLoading = true
     },
   },
