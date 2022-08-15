@@ -12,3 +12,19 @@ export const getUserFromLocalStorage = () => {
 export const removeUserFromLocalStorage = () => {
   localStorage.removeItem('user')
 }
+
+// =========Cart =============
+
+export const setCartInLocalStorage = (cart) => {
+  localStorage.setItem('cart', JSON.stringify(cart))
+}
+
+export const getCartFromLocalStorage = () => {
+  const result = localStorage.getItem('cart')
+  const cart = result ? JSON.parse(result) : null
+  return cart
+}
+
+export const removeCartFromLocalStorage = () => {
+  localStorage.removeItem('cart')
+}

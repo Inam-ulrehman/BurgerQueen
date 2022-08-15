@@ -36,7 +36,6 @@ const Reviews = () => {
   }
   // handle Review
   const handleReview = (e) => {
-    console.log(e.target)
     setStarValue(e.target.id)
   }
   useEffect(() => {
