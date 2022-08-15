@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { Link, useParams } from 'react-router-dom'
 import styled from 'styled-components'
 import Stars from '../components/Cards/Stars'
+import ReviewHolder from '../components/Reviews/ReviewHolder'
 import {
   getReviewsInput,
   getReviewThunk,
@@ -12,8 +13,10 @@ import {
 } from '../features/reviews/reviewSlice'
 
 const Reviews = () => {
+  const [value, setValue] = useState(false)
   const [starValue, setStarValue] = useState(5)
   const { review } = useSelector((state) => state)
+
   const dispatch = useDispatch()
   const params = useParams()
   const productId = params.singleProduct
@@ -23,6 +26,7 @@ const Reviews = () => {
     const { name, reviewInput } = review
     e.preventDefault()
     dispatch(postReviewThunk({ productId, starValue, name, reviewInput }))
+    setValue(!value)
   }
   // onChange value
   const handleChange = (e) => {
@@ -38,7 +42,7 @@ const Reviews = () => {
   useEffect(() => {
     dispatch(getReviewThunk(productId))
     // eslint-disable-next-line
-  }, [])
+  }, [value])
   return (
     <Wrapper>
       <h1 className='title'>Review's</h1>
@@ -91,6 +95,7 @@ const Reviews = () => {
           Submit
         </button>
       </form>
+      <ReviewHolder review={review} />
     </Wrapper>
   )
 }

@@ -25,3 +25,6 @@ export const formatPrice = (number) => {
 
 // ============Scroll up============
 window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })
+// ==========Moment============
+
+moment(createdAt).format('MMM Do YY')

@@ -1,4 +1,5 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
+
 import { customFetchReview } from '../../utils/axios'
 
 const initialState = {
@@ -6,6 +7,7 @@ const initialState = {
   stars: '',
   reviewInput: '',
   reviews: [],
+  total: '',
   isLoading: false,
 }
 //==================== Post Reviews ============
@@ -28,10 +30,13 @@ export const postReviewThunk = createAsyncThunk(
 export const getReviewThunk = createAsyncThunk(
   'reviews/getReviewThunk',
   async (id, thunkAPI) => {
-    console.log(id)
-
+    const item = id
+    const product = item
+    JSON.stringify(product)
     try {
-      const resp = await customFetchReview.get('reviews', {})
+      const resp = await customFetchReview.post('reviews/all', {
+        product,
+      })
       console.log(resp.data)
       return resp.data
     } catch (error) {
@@ -64,7 +69,10 @@ const reviewSlice = createSlice({
     [getReviewThunk.pending]: (state) => {
       state.isLoading = true
     },
-    [getReviewThunk.fulfilled]: (state) => {
+    [getReviewThunk.fulfilled]: (state, { payload }) => {
+      const { count, reviews } = payload
+      state.total = count
+      state.reviews = reviews
       state.isLoading = false
     },
     [getReviewThunk.rejected]: (state) => {
