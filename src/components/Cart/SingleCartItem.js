@@ -4,8 +4,8 @@ import {
   decreaseItemAmount,
   increaseItemAmount,
   removeCartItem,
-} from '../features/cart/cartSlice'
-import { formatPrice } from '../utils/helper'
+} from '../../features/cart/cartSlice'
+import { formatPrice } from '../../utils/helper'
 
 const SingleCartItem = ({ name, _id, total, image, price }) => {
   const dispatch = useDispatch()

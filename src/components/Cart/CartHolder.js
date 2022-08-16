@@ -2,7 +2,7 @@ import React from 'react'
 import { useEffect } from 'react'
 
 import { useSelector, useDispatch } from 'react-redux'
-import { calculateTotal, emptyCart } from '../features/cart/cartSlice'
+import { calculateTotal, emptyCart } from '../../features/cart/cartSlice'
 
 import SingleCartItem from './SingleCartItem'
 

@@ -3,10 +3,14 @@ import { formatPrice } from '../../utils/helper'
 import {
   getCartFromLocalStorage,
   setCartInLocalStorage,
+  removeCartFromLocalStorage,
+  setCashOrderInLocalStorage,
+  getCashOrderFromLocalStorage,
 } from '../../utils/localStorage'
 
 const initialState = {
   name: '',
+  payCash: getCashOrderFromLocalStorage() || [],
   cartItem: 0,
   cart: getCartFromLocalStorage() || [],
   total: 0,
@@ -23,7 +27,7 @@ const cartSlice = createSlice({
       let total = { total: 1 }
       let product = payload.find((item) => item)
       product = [{ ...product, ...total }]
-      console.log(product)
+
       if (state.cart.find((item) => item._id === payLoadId)) {
         return console.log('id match')
       } else {
@@ -72,6 +76,12 @@ const cartSlice = createSlice({
       state.cartItem = amount
       state.total = formatPrice(total)
     },
+    payInCash: (state, { payload }) => {
+      state.payCash = state.cart
+      setCashOrderInLocalStorage(state.payCash)
+      removeCartFromLocalStorage()
+      state.cart = []
+    },
   },
 })
 
@@ -83,5 +93,6 @@ export const {
   decreaseItemAmount,
   emptyCart,
   calculateTotal,
+  payInCash,
 } = cartSlice.actions
 export default cartSlice.reducer

@@ -28,3 +28,21 @@ export const getCartFromLocalStorage = () => {
 export const removeCartFromLocalStorage = () => {
   localStorage.removeItem('cart')
 }
+
+// ==========Cash Order ===============
+
+export const setCashOrderInLocalStorage = (cart) => {
+  localStorage.setItem('cashOrder', JSON.stringify(cart))
+}
+
+export const getCashOrderFromLocalStorage = () => {
+  const result = localStorage.getItem('cashOrder')
+  const cart = result ? JSON.parse(result) : null
+  return cart
+}
+
+export const removeCashOrderFromLocalStorage = () => {
+  localStorage.removeItem('cashOrder')
+}
+
+// ===============================

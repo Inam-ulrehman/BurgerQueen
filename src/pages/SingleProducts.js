@@ -2,7 +2,7 @@ import React from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 import { useEffect } from 'react'
-import CartHolder from '../components/CartHolder'
+import CartHolder from '../components/Cart/CartHolder'
 import { getCartItems } from '../features/cart/cartSlice'
 
 const SingleProducts = () => {

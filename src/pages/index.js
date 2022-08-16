@@ -9,6 +9,7 @@ import TypeProducts from './TypeProducts'
 import Reviews from './Reviews'
 import User from './User'
 import Cart from './Cart'
+import PayCash from './PayCash'
 
 export {
   SharedLayout,
@@ -22,4 +23,5 @@ export {
   Reviews,
   User,
   Cart,
+  PayCash,
 }
