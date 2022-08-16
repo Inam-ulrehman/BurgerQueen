@@ -1,58 +1,40 @@
 import React from 'react'
+import { useEffect } from 'react'
 
-import { useDispatch, useSelector } from 'react-redux'
-import { increaseItemAmount, removeCartItem } from '../features/cart/cartSlice'
+import { useSelector, useDispatch } from 'react-redux'
+import { calculateTotal, emptyCart } from '../features/cart/cartSlice'
+
+import SingleCartItem from './SingleCartItem'
 
 const CartHolder = () => {
   const dispatch = useDispatch()
-
-  const { cart } = useSelector((state) => {
+  const { cart, total } = useSelector((state) => {
     return state.cart
   })
-  // =======increaseValue=======
-  const handleIncrease = (id) => {
-    dispatch(increaseItemAmount(id))
-  }
-  // ======Decrease Value=======
-  const handleDecrease = (e) => {
-    console.log(e.target)
-  }
-
-  const handleRemove = (e) => {
-    dispatch(removeCartItem(e))
-  }
+  useEffect(() => {
+    dispatch(calculateTotal())
+    // eslint-disable-next-line
+  }, [cart])
   if (cart.length === 0) return <div>Your cart is empty</div>
   return (
     <div>
       <h4>Cart holder</h4>
 
       {cart.map((item, index) => {
-        return (
-          <div key={index}>
-            <p>{item.name}</p>
-            <button
-              type='button'
-              className='btn'
-              onClick={() => handleIncrease(item._id)}
-            >
-              increase
-            </button>
-            <span className='btn'>{item.total}</span>
-            <button type='button' className='btn' onClick={handleDecrease}>
-              decrease
-            </button>
-            <div className='img-container'></div>
-            <img className='img' src={item.image} alt='' />
-            <button
-              type='button'
-              onClick={() => handleRemove(item._id)}
-              className='btn'
-            >
-              {item.name} Remove
-            </button>
-          </div>
-        )
+        return <SingleCartItem key={index} {...item} />
       })}
+      <button
+        type='button'
+        className='btn'
+        onClick={() => dispatch(emptyCart())}
+      >
+        empty cart
+      </button>
+      <hr />
+      <div>
+        <p> total</p>
+        <p>{total}</p>
+      </div>
     </div>
   )
 }
