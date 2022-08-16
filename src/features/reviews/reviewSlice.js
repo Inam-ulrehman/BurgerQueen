@@ -37,7 +37,7 @@ export const getReviewThunk = createAsyncThunk(
       const resp = await customFetchReview.post('reviews/all', {
         product,
       })
-      console.log(resp.data)
+
       return resp.data
     } catch (error) {
       console.log(error.response)
