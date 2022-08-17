@@ -1,11 +1,9 @@
 import React from 'react'
 import { useEffect } from 'react'
-
 import { useSelector, useDispatch } from 'react-redux'
 import { calculateTotal, emptyCart } from '../../features/cart/cartSlice'
-
+import EmptyCart from './EmptyCart'
 import SingleCartItem from './SingleCartItem'
-
 const CartHolder = () => {
   const dispatch = useDispatch()
   const { cart, total } = useSelector((state) => {
@@ -15,7 +13,7 @@ const CartHolder = () => {
     dispatch(calculateTotal())
     // eslint-disable-next-line
   }, [cart])
-  if (cart.length === 0) return <div>Your cart is empty</div>
+  if (cart.length === 0) return <EmptyCart />
   return (
     <div>
       <h4>Cart holder</h4>

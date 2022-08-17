@@ -1,4 +1,4 @@
-import { createSlice } from '@reduxjs/toolkit'
+import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
 import { formatPrice } from '../../utils/helper'
 import {
   getCartFromLocalStorage,
@@ -7,15 +7,37 @@ import {
   setCashOrderInLocalStorage,
   getCashOrderFromLocalStorage,
 } from '../../utils/localStorage'
+import axios from 'axios'
+import { toast } from 'react-toastify'
 
+// getCashOrderFromLocalStorage() ||getCashOrderFromLocalStorage() ||
 const initialState = {
   name: '',
+  cashOrderId: '',
   payCash: getCashOrderFromLocalStorage() || [],
   cartItem: 0,
   cart: getCartFromLocalStorage() || [],
   total: 0,
   isLoading: false,
 }
+
+// Sent Order to CashOrder BackEnd....
+export const postCashOrderThunk = createAsyncThunk(
+  'cart/postCashOrderThunk',
+  async (order, thunkApi) => {
+    console.log(order)
+    try {
+      const response = await axios.post(
+        'https://burgerqueenbyinam.herokuapp.com/api/v1/cashorders',
+        order
+      )
+      console.log(response.data)
+      return response.data
+    } catch (error) {
+      return thunkApi.rejectWithValue(error.response.data)
+    }
+  }
+)
 
 const cartSlice = createSlice({
   name: 'cart',
@@ -29,11 +51,11 @@ const cartSlice = createSlice({
       product = [{ ...product, ...total }]
 
       if (state.cart.find((item) => item._id === payLoadId)) {
-        return console.log('id match')
+        return
       } else {
         state.cart = [...state.cart, ...product]
         setCartInLocalStorage(state.cart)
-        return console.log('id not matching')
+        return
       }
     },
     removeCartItem: (state, { payload }) => {
@@ -77,10 +99,30 @@ const cartSlice = createSlice({
       state.total = formatPrice(total)
     },
     payInCash: (state, { payload }) => {
-      state.payCash = state.cart
-      setCashOrderInLocalStorage(state.payCash)
       removeCartFromLocalStorage()
       state.cart = []
+    },
+    getUserNameCashPayment: (state, { payload }) => {
+      const { name, value } = payload
+      state[name] = value
+    },
+  },
+  extraReducers: {
+    [postCashOrderThunk.pending]: (state, { payload }) => {
+      state.isLoading = true
+    },
+    [postCashOrderThunk.fulfilled]: (state, { payload }) => {
+      const { name, payCash, _id } = payload.cashOrder
+      console.log(payCash)
+      state.name = name
+      state.cashOrderId = _id
+      state.payCash = payCash
+      setCashOrderInLocalStorage(state.payCash)
+      state.isLoading = false
+    },
+    [postCashOrderThunk.rejected]: (state, { payload }) => {
+      state.isLoading = false
+      toast.error(payload)
     },
   },
 })
@@ -94,5 +136,6 @@ export const {
   emptyCart,
   calculateTotal,
   payInCash,
+  getUserNameCashPayment,
 } = cartSlice.actions
 export default cartSlice.reducer

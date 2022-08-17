@@ -12,7 +12,6 @@ const SharedDashboardLayout = () => {
       <MobileNavbar />
       <DesktopNavbar />
       <div className='section'>
-        <h1>Shared layout</h1>
         <div>
           <Link to='/dashboard/profile' className='btn'>
             Profile
