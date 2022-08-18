@@ -19,9 +19,9 @@ const PayCash = () => {
         {cashOrderId}{' '}
       </p>
       <p>your total bill is {total}</p>
-      {payCash?.map((item) => {
+      {payCash?.map((item, index) => {
         return (
-          <div>
+          <div key={index}>
             <div className='img-container'>
               <img src={item.image} alt='' className='img' />
             </div>

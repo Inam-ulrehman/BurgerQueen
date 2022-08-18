@@ -19,7 +19,7 @@ const Cart = () => {
       {showName && <CashOrderName handleHideName={handleHideName} />}
 
       <CartHolder />
-      <Link to='/user' className='btn'>
+      <Link to='/dashboard/payment' className='btn'>
         PayOnline
       </Link>
       <div>

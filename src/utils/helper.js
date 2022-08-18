@@ -28,3 +28,9 @@ window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })
 // ==========Moment============
 
 //  moment(createdAt).format('MMM Do YY')
+
+// ===npm install query-string=======
+// import queryString from 'query-string'
+// const parsed = queryString.parse(location.search)
+// console.log(parsed)
+// =====================================

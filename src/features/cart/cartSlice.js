@@ -1,5 +1,4 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
-import { formatPrice } from '../../utils/helper'
 import {
   getCartFromLocalStorage,
   setCartInLocalStorage,
@@ -36,6 +35,24 @@ export const postCashOrderThunk = createAsyncThunk(
     } catch (error) {
       return thunkApi.rejectWithValue(error.response.data)
     }
+  }
+)
+
+// Sent Order to OnlineOrder BackEnd....
+export const postOnlineOrderThunk = createAsyncThunk(
+  'cart/postOnlineOrderThunk',
+  async (order, thunkApi) => {
+    console.log(order)
+    // try {
+    //   const response = await axios.post(
+    //     'https://burgerqueenbyinam.herokuapp.com/api/v1/cashorders',
+    //     order
+    //   )
+    //   console.log(response.data)
+    //   return response.data
+    // } catch (error) {
+    //   return thunkApi.rejectWithValue(error.response.data)
+    // }
   }
 )
 
@@ -83,10 +100,6 @@ const cartSlice = createSlice({
       findSingleObject.total = findSingleObject.total - 1
       setCartInLocalStorage(state.cart)
     },
-    emptyCart: (state, { payload }) => {
-      state.cart = []
-      setCartInLocalStorage(state.cart)
-    },
     calculateTotal: (state, { payload }) => {
       let amount = 0
       let total = 0
@@ -96,7 +109,7 @@ const cartSlice = createSlice({
         return
       })
       state.cartItem = amount
-      state.total = formatPrice(total)
+      state.total = total
     },
     payInCash: (state, { payload }) => {
       removeCartFromLocalStorage()
@@ -118,6 +131,19 @@ const cartSlice = createSlice({
       state.cashOrderId = _id
       state.payCash = payCash
       setCashOrderInLocalStorage(state.payCash)
+      state.isLoading = false
+    },
+    [postCashOrderThunk.rejected]: (state, { payload }) => {
+      state.isLoading = false
+      toast.error(payload)
+    },
+    // =========OnlineOrder========
+    [postOnlineOrderThunk.pending]: (state, { payload }) => {
+      state.isLoading = true
+    },
+    [postOnlineOrderThunk.fulfilled]: (state, { payload }) => {
+      state.cart = []
+      setCartInLocalStorage(state.cart)
       state.isLoading = false
     },
     [postCashOrderThunk.rejected]: (state, { payload }) => {
