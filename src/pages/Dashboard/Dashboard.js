@@ -6,7 +6,7 @@ import queryString from 'query-string'
 const Dashboard = () => {
   const parsed = queryString.parse(window.location.search)
   const { redirect_status } = parsed
-  console.log(redirect_status)
+
   return (
     <div>
       <h1>Dashboard</h1>

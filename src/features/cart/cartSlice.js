@@ -41,18 +41,52 @@ export const postCashOrderThunk = createAsyncThunk(
 // Sent Order to OnlineOrder BackEnd....
 export const postOnlineOrderThunk = createAsyncThunk(
   'cart/postOnlineOrderThunk',
-  async (order, thunkApi) => {
-    console.log(order)
-    // try {
-    //   const response = await axios.post(
-    //     'https://burgerqueenbyinam.herokuapp.com/api/v1/cashorders',
-    //     order
-    //   )
-    //   console.log(response.data)
-    //   return response.data
-    // } catch (error) {
-    //   return thunkApi.rejectWithValue(error.response.data)
-    // }
+  async (paymentDetails, thunkAPI) => {
+    console.log(paymentDetails)
+
+    try {
+      const token = thunkAPI.getState().user.user.token
+      const name = thunkAPI.getState().user.user.name
+      const cart = thunkAPI.getState().cart.cart
+      const total = thunkAPI.getState().cart.total
+      console.log(total)
+      const response = await axios.post(
+        'https://burgerqueenbyinam.herokuapp.com/api/v1/stripes',
+        { name, total, cart, paymentDetails },
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        }
+      )
+      console.log(response.data)
+      return response.data
+    } catch (error) {
+      return thunkAPI.rejectWithValue(error.response.data)
+    }
+  }
+)
+
+// Get Order from OnlineOrder BackEnd....
+export const getallOnlineOrderThunk = createAsyncThunk(
+  'cart/getallOnlineOrderThunk',
+  async (_, thunkAPI) => {
+    try {
+      const token = thunkAPI.getState().user.user.token
+
+      const response = await axios.get(
+        'https://burgerqueenbyinam.herokuapp.com/api/v1/stripes',
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        }
+      )
+      console.log(response.data)
+      return response.data
+    } catch (error) {
+      return thunkAPI.rejectWithValue(error.response.data)
+    }
   }
 )
 
@@ -150,7 +184,18 @@ const cartSlice = createSlice({
       setCartInLocalStorage(state.cart)
       state.isLoading = false
     },
-    [postCashOrderThunk.rejected]: (state, { payload }) => {
+    [postOnlineOrderThunk.rejected]: (state, { payload }) => {
+      state.isLoading = false
+      toast.error(payload)
+    },
+    // =========OnlineOrder========
+    [getallOnlineOrderThunk.pending]: (state, { payload }) => {
+      state.isLoading = true
+    },
+    [getallOnlineOrderThunk.fulfilled]: (state, { payload }) => {
+      state.isLoading = false
+    },
+    [getallOnlineOrderThunk.rejected]: (state, { payload }) => {
       state.isLoading = false
       toast.error(payload)
     },
