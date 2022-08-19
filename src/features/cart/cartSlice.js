@@ -61,6 +61,10 @@ const cartSlice = createSlice({
   initialState,
   reducers: {
     createFunction: (state, { payload }) => {},
+    removeCart: (state, { payload }) => {
+      state.cart = []
+      setCartInLocalStorage(state.cart)
+    },
     getCartItems: (state, { payload }) => {
       const payLoadId = payload[0]._id
       let total = { total: 1 }
@@ -163,5 +167,6 @@ export const {
   calculateTotal,
   payInCash,
   getUserNameCashPayment,
+  removeCart,
 } = cartSlice.actions
 export default cartSlice.reducer

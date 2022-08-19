@@ -4,8 +4,10 @@ import CartHolder from '../components/Cart/CartHolder'
 
 import CashOrderName from '../components/Cart/CashOrderName'
 import { useState } from 'react'
+import { useSelector } from 'react-redux'
 
 const Cart = () => {
+  const { cart, user } = useSelector((state) => state)
   const [showName, setShowName] = useState(false)
 
   const handleShowName = (e) => {
@@ -14,19 +16,26 @@ const Cart = () => {
   const handleHideName = (e) => {
     setShowName(false)
   }
+
   return (
     <div>
       {showName && <CashOrderName handleHideName={handleHideName} />}
 
       <CartHolder />
-      <Link to='/dashboard/payment' className='btn'>
-        PayOnline
-      </Link>
-      <div>
-        <button className='btn' type='button' onClick={handleShowName}>
-          payCash
-        </button>
-      </div>
+
+      {cart.cart.length === 1 ? (
+        <div>
+          <Link
+            to={user.user.length === 0 ? '/user' : '/dashboard/payment'}
+            className='btn'
+          >
+            PayOnline
+          </Link>
+          <button className='btn' type='button' onClick={handleShowName}>
+            payCash
+          </button>
+        </div>
+      ) : null}
     </div>
   )
 }

@@ -15,14 +15,13 @@ import axios from 'axios'
 const stripePromise = loadStripe(
   'pk_test_51LXpgyF4puijxq7wiOgfRsWwGxo8SagLig98h9yP5XIfCY1hBJEYMCXnXxhYmFk9jWrZk8m5qvUhKf4VDHJYUTw500pg5RV5Jc'
 )
-
 const Payment = () => {
   const [clientSecret, setClientSecret] = useState('')
   const { cart, total } = useSelector((state) => state.cart)
   const fetchSecret = async () => {
     try {
       const response = await axios.post(
-        'http://localhost:5000/create-payment-intent',
+        'https://burgerqueenbyinam.herokuapp.com/create-payment-intent',
         { cart, total }
       )
       console.log(response)

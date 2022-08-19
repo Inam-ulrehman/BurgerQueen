@@ -1,8 +1,9 @@
 import React from 'react'
 import { useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-import { calculateTotal, emptyCart } from '../../features/cart/cartSlice'
+import { calculateTotal, removeCart } from '../../features/cart/cartSlice'
 import EmptyCart from './EmptyCart'
+
 import SingleCartItem from './SingleCartItem'
 const CartHolder = () => {
   const dispatch = useDispatch()
@@ -24,7 +25,7 @@ const CartHolder = () => {
       <button
         type='button'
         className='btn'
-        onClick={() => dispatch(emptyCart())}
+        onClick={() => dispatch(removeCart())}
       >
         empty cart
       </button>
