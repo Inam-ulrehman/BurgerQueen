@@ -26,6 +26,7 @@ const PaymentSucceeded = () => {
     if (value) {
       callFunction()
     }
+    // eslint-disable-next-line
   }, [value])
   return (
     <div>

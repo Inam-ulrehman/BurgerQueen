@@ -1,11 +1,8 @@
 import React from 'react'
+import UserProfileHolder from '../../components/InputHolder/UserProfileHolder'
 
 const Profile = () => {
-  return (
-    <div>
-      <h1>profile</h1>
-    </div>
-  )
+  return <UserProfileHolder />
 }
 
 export default Profile
