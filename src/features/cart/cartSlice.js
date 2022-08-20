@@ -49,10 +49,19 @@ export const postOnlineOrderThunk = createAsyncThunk(
       const name = thunkAPI.getState().user.user.name
       const cart = thunkAPI.getState().cart.cart
       const total = thunkAPI.getState().cart.total
-      console.log(total)
+      const { payment_intent, payment_intent_client_secret, redirect_status } =
+        paymentDetails
       const response = await axios.post(
         'https://burgerqueenbyinam.herokuapp.com/api/v1/stripes',
-        { name, total, cart, paymentDetails },
+        {
+          name,
+          total,
+          cart,
+          paymentDetails,
+          payment_intent,
+          payment_intent_client_secret,
+          redirect_status,
+        },
         {
           headers: {
             Authorization: `Bearer ${token}`,
