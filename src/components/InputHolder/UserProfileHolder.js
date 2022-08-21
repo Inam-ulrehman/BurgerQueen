@@ -4,6 +4,7 @@ import { useSelector, useDispatch } from 'react-redux'
 import {
   getLoginUserThunk,
   getUserProfile,
+  postLoginUserThunk,
 } from '../../features/user/userProfileSlice'
 
 const UserProfileHolder = () => {
@@ -25,6 +26,19 @@ const UserProfileHolder = () => {
   const handleSubmit = (e) => {
     e.preventDefault()
     console.log(e.target)
+    dispatch(
+      postLoginUserThunk({
+        name,
+        lastName,
+        dateOfBirth,
+        mobile,
+        house,
+        street,
+        town,
+        province,
+        country,
+      })
+    )
   }
   // handleChange====
   const handleChange = (e) => {
