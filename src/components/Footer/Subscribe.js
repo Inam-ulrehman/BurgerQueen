@@ -1,16 +1,37 @@
 import React from 'react'
+import { useState } from 'react'
 import styled from 'styled-components'
+import axios from 'axios'
+import { toast } from 'react-toastify'
 
 const Subscribe = () => {
-  const handleSubmit = (e) => {
+  const [email, setEmail] = useState('')
+
+  const handleSubmit = async (e) => {
     e.preventDefault()
+    axios.post('https://burgerqueenbyinam.herokuapp.com/api/v1/emails', {
+      email,
+    })
+    setEmail('')
+    toast.success('Thank you for subscription .')
+  }
+  const handleChange = (e) => {
+    const value = e.target.value
+    setEmail(value)
   }
   return (
     <Wrapper>
       <h4>News letter</h4>
       <p>Receive updates on the latest news and Offers.</p>
-      <form className='subscribe-form' onClick={handleSubmit}>
-        <input placeholder='Enter your email address.' type='text' />
+      <form className='subscribe-form' onSubmit={handleSubmit}>
+        <input
+          placeholder='Enter your email address.'
+          type='text'
+          name='name'
+          id='name'
+          value={email}
+          onChange={handleChange}
+        />
         <button className='btn' type='submit'>
           Join
         </button>
