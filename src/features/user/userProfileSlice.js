@@ -88,7 +88,7 @@ const userProfileSlice = createSlice({
       if (payload.profiles.length > 0) {
         // Customer can update profile but we keep old data as well for record....
         console.log(payload.profiles[0])
-        const profile = payload.profiles[0]
+        const profile = payload.profiles.reverse()[0]
         state.name = profile.name
         state.lastName = profile.lastName
         state.dateOfBirth = profile.dateOfBirth
