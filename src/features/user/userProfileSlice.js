@@ -27,7 +27,7 @@ export const getLoginUserThunk = createAsyncThunk(
       const token = thunkAPI.getState().user.user.token
 
       const response = await axios.get(
-        'http://localhost:5000/api/v1/profiles',
+        'https://burgerqueenbyinam.herokuapp.com/api/v1/profiles',
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -50,7 +50,7 @@ export const postLoginUserThunk = createAsyncThunk(
     try {
       const token = thunkAPI.getState().user.user.token
       const response = await axios.post(
-        'http://localhost:5000/api/v1/profiles',
+        'https://burgerqueenbyinam.herokuapp.com/api/v1/profiles',
         profile,
         {
           headers: {

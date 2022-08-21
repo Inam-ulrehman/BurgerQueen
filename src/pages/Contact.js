@@ -14,14 +14,15 @@ const Contact = () => {
   const { contact } = useSelector((state) => state)
   //  handle Submit
   const handleSubmit = (e) => {
-    const { name, lastName, email, message, details } = contact
+    const { name, lastName, email, message, mobile, details } = contact
     e.preventDefault()
-    if (!name || !lastName || !email || !message || !details) {
+    if (!name || !lastName || !email || !message || !details || !mobile) {
       toast.warning('Please fill in all details...')
       return
     } else {
-      dispatch(contactThunk({ name, lastName, email, message, details }))
-      toast.success(`A team member will in touch soon ${name}.`)
+      dispatch(
+        contactThunk({ name, lastName, email, message, mobile, details })
+      )
       return
     }
   }
@@ -86,6 +87,20 @@ const Contact = () => {
             id='email'
             name='email'
             value={contact.email}
+            onChange={handleChange}
+          />
+        </div>
+        {/* mobile input */}
+        <div>
+          <label className='form-label' htmlFor='mobile'>
+            mobile
+          </label>
+          <input
+            className='form-input'
+            type='text'
+            id='mobile'
+            name='mobile'
+            value={contact.mobile}
             onChange={handleChange}
           />
         </div>
