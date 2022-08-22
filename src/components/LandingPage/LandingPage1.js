@@ -1,5 +1,5 @@
 import React from 'react'
-import { category } from '../../utils/sampleData'
+// import { category } from '../../utils/sampleData'
 import image from '../../../src/images/Home.png'
 import styled from 'styled-components'
 
