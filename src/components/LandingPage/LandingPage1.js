@@ -11,7 +11,7 @@ const LandingPage1 = () => {
     <Wrapper>
       <div className='image-holder'>
         <div className='box1'>
-          <h3 className='title'>Beef burger</h3>
+          <h4 className='title'>Beef burger</h4>
           <div className='title-underline'></div>
           <div className='Link-holder'>
             <Link className='orderLink btn' to={'products'}>
@@ -33,18 +33,20 @@ const Wrapper = styled.div`
     grid-template-columns: 1.3fr 1fr;
     height: calc(100vh - 88px);
   }
-  .imageBox {
-    max-height: 300px;
-  }
+
   @media (max-width: 768px) {
     .image-holder {
-      max-height: 50vh;
+      max-height: 40vh;
+      .box1,
+      .box2 {
+        max-height: 40vh;
+      }
     }
   }
   .box1 {
     .title {
       color: var(--primary-9);
-      margin-top: 7rem;
+      margin-top: 4rem;
     }
     .Link-holder {
       text-align: center;
