@@ -11,9 +11,9 @@ const SharedLayout = () => {
     <Wrapper>
       <DesktopNavbar />
       <MobileNavbar />
-      <section className='section'>
+      <div className='main-section'>
         <Outlet />
-      </section>
+      </div>
       <Footer />
     </Wrapper>
   )
@@ -21,8 +21,8 @@ const SharedLayout = () => {
 
 const Wrapper = styled.main`
   @media (max-width: 768px) {
-    .section {
-      margin-top: 3.7rem;
+    .main-section {
+      margin-top: 70px;
     }
   }
 `
