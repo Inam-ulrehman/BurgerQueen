@@ -22,6 +22,7 @@ html {
   --primary-8: #dda15e;
   --primary-9: #eece9f;
   --primary-10: #fefae0;
+  --primary-11: #7c3b0b;
 
   /* grey */
   --grey-05: #f8fafc;
@@ -264,7 +265,7 @@ ul {
 }
 
 .title-underline {
-  background: var(--primary-5);
+  background: var(--primary-1);
   width: 7rem;
   height: 0.25rem;
   margin: 0 auto;
