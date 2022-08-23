@@ -1,10 +1,12 @@
 import React from 'react'
-import LandingPage1 from '../components/LandingPage/LandingPage1'
+import LandingPageOne from '../components/LandingPage/LandingPageOne'
+import LandingPageTwo from '../components/LandingPage/LandingPageTwo'
 
 const LandingPage = () => {
   return (
     <div>
-      <LandingPage1 />
+      <LandingPageOne />
+      <LandingPageTwo />
     </div>
   )
 }
