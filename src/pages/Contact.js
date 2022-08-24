@@ -8,6 +8,8 @@ import {
   getContactDetails,
 } from '../features/contact/contactSlice'
 import { toast } from 'react-toastify'
+import TextField from '@mui/material/TextField'
+import Button from '@mui/material/Button'
 
 const Contact = () => {
   const dispatch = useDispatch()
@@ -47,105 +49,101 @@ const Contact = () => {
       <form className='form' onSubmit={handleSubmit}>
         <Logo />
         {/* name input */}
-        <div>
-          <label className='form-label' htmlFor='name'>
-            First Name
-          </label>
-          <input
-            className='form-input'
-            type='text'
-            id='name'
-            name='name'
-            value={contact.name}
-            onChange={handleChange}
-          />
-        </div>
+        <TextField
+          className='field'
+          label='Name'
+          variant='outlined'
+          type='text'
+          id='name'
+          name='name'
+          size='small'
+          value={contact.name}
+          onChange={handleChange}
+        />
 
         {/* last name input */}
-        <div>
-          <label className='form-label' htmlFor='lastName'>
-            Last Name
-          </label>
-          <input
-            className='form-input'
-            type='text'
-            id='lastName'
-            name='lastName'
-            value={contact.lastName}
-            onChange={handleChange}
-          />
-        </div>
+        <TextField
+          className='field'
+          label='Last Name'
+          variant='outlined'
+          type='text'
+          id='lastName'
+          name='lastName'
+          size='small'
+          value={contact.lastName}
+          onChange={handleChange}
+        />
 
         {/* email input */}
-        <div>
-          <label className='form-label' htmlFor='email'>
-            Email
-          </label>
-          <input
-            className='form-input'
-            type='text'
-            id='email'
-            name='email'
-            value={contact.email}
-            onChange={handleChange}
-          />
-        </div>
+        <TextField
+          className='field'
+          label='Email'
+          variant='outlined'
+          type='text'
+          id='email'
+          name='email'
+          size='small'
+          value={contact.email}
+          onChange={handleChange}
+        />
+
         {/* mobile input */}
-        <div>
-          <label className='form-label' htmlFor='mobile'>
-            mobile
-          </label>
-          <input
-            className='form-input'
-            type='text'
-            id='mobile'
-            name='mobile'
-            value={contact.mobile}
-            onChange={handleChange}
-          />
-        </div>
+        <TextField
+          className='field'
+          label='Mobile Number'
+          variant='outlined'
+          type='Number'
+          id='mobile'
+          name='mobile'
+          size='small'
+          value={contact.mobile}
+          onChange={handleChange}
+        />
 
         {/* message input */}
-        <div>
-          <label className='form-label' htmlFor='message'>
-            Message
-          </label>
-          <input
-            className='form-input'
-            type='text'
-            id='message'
-            name='message'
-            value={contact.message}
-            onChange={handleChange}
-          />
-        </div>
+        <TextField
+          className='field'
+          label='Message Title'
+          variant='outlined'
+          type='text'
+          id='message'
+          name='message'
+          size='small'
+          value={contact.message}
+          onChange={handleChange}
+        />
 
         {/* additional details input */}
-        <div>
-          <label className='form-label' htmlFor='details'>
-            Additional Details
-          </label>
-          <textarea
-            rows='7'
-            cols='50'
-            className='form-input'
-            type='text'
-            id='details'
-            name='details'
-            value={contact.details}
-            onChange={handleChange}
-          />
-        </div>
-        <button className='btn btn-block' type='submit'>
-          Submit your request
-        </button>
+        <TextField
+          className='field'
+          label='Additional Details'
+          variant='outlined'
+          type='text'
+          id='details'
+          name='details'
+          multiline
+          rows={6}
+          value={contact.details}
+          onChange={handleChange}
+        />
+
+        <Button
+          size='small'
+          variant='contained'
+          className='btnMui'
+          type='submit'
+        >
+          Submit
+        </Button>
       </form>
-      <div className='style'></div>
     </Wrapper>
   )
 }
 const Wrapper = styled.div`
-  .title {
+  .field {
+    margin-top: 1rem;
+  }
+  .heading-holder .title {
     span {
       color: var(--primary-5);
     }
@@ -155,6 +153,18 @@ const Wrapper = styled.div`
     img {
       max-width: 300px;
     }
+  }
+  @media (min-width: 768px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    .heading-holder {
+      display: grid;
+      align-content: center;
+    }
+  }
+  .btnMui {
+    margin-top: 1rem;
   }
 `
 export default Contact

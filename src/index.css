@@ -160,6 +160,15 @@ ul {
   background: var(--primary-7);
   box-shadow: var(--shadow-3);
 }
+/* =============Material Ui=========== */
+.btnMui {
+  background: var(--primary-5) !important;
+  display: block !important;
+}
+.btnMui:hover {
+  background: var(--primary-7) !important;
+}
+/* ================= */
 .btn-hipster {
   color: var(--white);
   background: var(--primary-8);
