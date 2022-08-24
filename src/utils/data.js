@@ -8,6 +8,10 @@ import {
 import { CgMenuOreos } from 'react-icons/cg'
 import { FaUserTie, FaPhoneAlt, FaInstagramSquare } from 'react-icons/fa'
 import { IoMdCart } from 'react-icons/io'
+import imageOne from '../images/2.png'
+import imageTwo from '../images/3.png'
+import imageThree from '../images/4.png'
+import imageFour from '../images/5.png'
 
 // ======Data for navbar=========Start
 
@@ -96,3 +100,56 @@ export const address = [
   },
 ]
 // ======Data for Address ==========End
+
+// ======Landing page Two cart=====Start
+export const landingTwo = [
+  {
+    id: 1,
+    title: 'Box-1',
+    classType: 'box1',
+    paragraph: ` Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum
+            repellendus quibusdam, deleniti nisi molestiae quas neque sint non
+            fugit quaerat dicta et tenetur eos. Nulla delectus rem alias eum
+            error.`,
+    path: '/user',
+    image: imageOne,
+    buttonTitle: 'SignUp to Order',
+  },
+  {
+    id: 2,
+    title: 'Box-2',
+    classType: 'box2',
+    paragraph: ` Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum
+            repellendus quibusdam, deleniti nisi molestiae quas neque sint non
+            fugit quaerat dicta et tenetur eos. Nulla delectus rem alias eum
+            error.`,
+    path: '/user',
+    image: imageTwo,
+    buttonTitle: 'SignUp to Order',
+  },
+  {
+    id: 3,
+    title: 'Box-3',
+    classType: 'box3',
+    paragraph: ` Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum
+            repellendus quibusdam, deleniti nisi molestiae quas neque sint non
+            fugit quaerat dicta et tenetur eos. Nulla delectus rem alias eum
+            error.`,
+    path: '/products',
+    image: imageThree,
+    buttonTitle: 'Special Offers',
+  },
+  {
+    id: 4,
+    title: 'Box-4',
+    classType: 'box4',
+    paragraph: ` Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum
+            repellendus quibusdam, deleniti nisi molestiae quas neque sint non
+            fugit quaerat dicta et tenetur eos. Nulla delectus rem alias eum
+            error.`,
+    path: '/products/breakfast',
+    image: imageFour,
+    buttonTitle: 'BreakFast Menu',
+  },
+]
+// ======Landing page Two cart=====End

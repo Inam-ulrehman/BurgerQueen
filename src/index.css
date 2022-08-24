@@ -46,9 +46,9 @@ html {
   --small-text: 0.875rem;
   --extra-small-text: 0.7em;
   /* rest of the vars */
-  --backgroundColor: var(--grey-1);
+  --backgroundColor: var(--primary-10);
   --textColor: var(--grey-9);
-  --radius: 0.25rem;
+  --radius: 0.5rem;
   --letterSpacing: 1px;
   --transition: 0.3s ease-in-out all;
   --max-width: 1120px;

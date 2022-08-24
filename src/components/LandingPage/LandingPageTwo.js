@@ -1,33 +1,32 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
-import boxImage from '../../images/2.png'
+import { landingTwo } from '../../utils/data'
 
 const LandingPageTwo = () => {
   return (
     <Wrapper>
-      <div className='container'>
-        <div className='box1'>
-          <img src={boxImage} alt='' />
-          <h4>box-1</h4>
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum
-            repellendus quibusdam, deleniti nisi molestiae quas neque sint non
-            fugit quaerat dicta et tenetur eos. Nulla delectus rem alias eum
-            error.
-          </p>
-          <Link className='button' to='/user'>
-            SignUp to Order
-          </Link>
-        </div>
-      </div>
+      {landingTwo.map((item) => {
+        const { id, title, classType, paragraph, path, image, buttonTitle } =
+          item
+        return (
+          <div key={id} className='container'>
+            <div className={classType}>
+              <img src={image} alt='' />
+              <h4>{title}</h4>
+              <p>{paragraph}</p>
+              <Link className='button' to={path}>
+                {buttonTitle}
+              </Link>
+            </div>
+          </div>
+        )
+      })}
     </Wrapper>
   )
 }
 const Wrapper = styled.div`
-  background-color: var(--primary-10);
-  height: 200vh;
-
+  display: grid;
   .container {
     display: grid;
     gap: 2rem;
@@ -37,13 +36,17 @@ const Wrapper = styled.div`
       max-height: 300px;
     }
   }
-  .box1 {
+  .box1,
+  .box2,
+  .box3,
+  .box4 {
     border-top-right-radius: var(--radius);
     border-top-left-radius: var(--radius);
     margin-top: 1rem;
     overflow: hidden;
     background-color: var(--white);
     max-width: 400px;
+    box-shadow: var(--shadow-2);
     h4 {
       margin: 0;
       padding-left: 1rem;
@@ -74,23 +77,22 @@ const Wrapper = styled.div`
       color: var(--primary-11);
     }
   }
+  .box2 {
+  }
 
   /* ==========Media query========= */
   @media (min-width: 600px) {
   }
   @media (min-width: 768px) {
-    height: 100vh;
     .container {
-      grid-template-columns: 1fr 1fr;
-      gap: 2rem;
       .box1 {
       }
     }
   }
   @media (min-width: 920px) {
+    grid-template-columns: 1fr 1fr;
   }
   @media (min-width: 1120px) {
   }
 `
-
 export default LandingPageTwo

@@ -15,7 +15,6 @@ const LandingPageOne = () => {
         </div>
         <div className='box2'>
           <h1>burger seller</h1>
-          <div className='title-underline'></div>
           <Link className='btn' to='products'>
             Menu
           </Link>
@@ -45,7 +44,7 @@ const Wrapper = styled.section`
     position: relative;
     display: grid;
     place-items: center;
-
+    box-shadow: var(--shadow-3);
     img {
       max-width: 100%;
       position: absolute;
@@ -53,16 +52,17 @@ const Wrapper = styled.section`
     }
   }
   .box2 {
-    background-color: var(--primary-5);
+    background-color: var(--primary-9);
     height: calc(50vh - 44px);
     display: grid;
     place-items: center;
     h1 {
-      color: var(--primary-10);
+      color: var(--primary-11);
     }
     div {
     }
     a {
+      margin-bottom: 2rem;
     }
   }
   .box3 {
@@ -75,7 +75,7 @@ const Wrapper = styled.section`
     object-fit: cover;
     img {
       max-width: var(--fixed-width);
-      max-height: 628;
+      max-height: 400px;
       position: absolute;
     }
   }
