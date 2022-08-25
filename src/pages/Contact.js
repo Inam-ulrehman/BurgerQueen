@@ -127,12 +127,7 @@ const Contact = () => {
           onChange={handleChange}
         />
 
-        <Button
-          size='small'
-          variant='contained'
-          className='btnMui'
-          type='submit'
-        >
+        <Button size='medium' variant='contained' type='submit'>
           Submit
         </Button>
       </form>
