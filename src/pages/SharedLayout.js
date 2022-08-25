@@ -22,7 +22,6 @@ const SharedLayout = () => {
 const Wrapper = styled.main`
   @media (max-width: 768px) {
     .main-section {
-      margin-top: 70px;
     }
   }
 `
