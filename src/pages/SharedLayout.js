@@ -17,8 +17,12 @@ const SharedLayout = () => {
 }
 
 const Wrapper = styled.main`
+  .main-section {
+    margin-top: 64px;
+  }
   @media (max-width: 768px) {
     .main-section {
+      margin-top: 54px;
     }
   }
 `

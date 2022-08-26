@@ -23,8 +23,6 @@ const Wrapper = styled.div`
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  margin: 0 auto;
-
   .Logo {
     position: absolute;
     left: 50%;
@@ -61,17 +59,16 @@ const Wrapper = styled.div`
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    background-position-y: 30px;
     height: 100vh;
   }
   @media (min-width: 600px) {
     .hero {
       left: 80%;
-      top: 80%;
+      top: 75%;
     }
     .Logo {
       left: 20%;
-      top: 80%;
+      top: 75%;
     }
   }
 `

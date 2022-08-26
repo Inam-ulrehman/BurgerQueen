@@ -19,6 +19,7 @@ import {
   User,
   Cart,
   PayCash,
+  TestPage,
 } from './pages'
 import {
   Dashboard,
@@ -43,6 +44,7 @@ const App = () => {
           <Route path='contact' element={<Contact />} />
           <Route path='user' element={<User />} />
           <Route path='cart' element={<Cart />} />
+          <Route path='test' element={<TestPage />} />
           <Route path='PayCash' element={<PayCash />} />
           <Route path='/products' element={<ProductsSharedLayout />}>
             <Route index element={<Products />} />

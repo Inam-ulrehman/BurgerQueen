@@ -10,6 +10,7 @@ import Reviews from './Reviews'
 import User from './User'
 import Cart from './Cart'
 import PayCash from './PayCash'
+import TestPage from './TestPage'
 
 export {
   SharedLayout,
@@ -24,4 +25,5 @@ export {
   User,
   Cart,
   PayCash,
+  TestPage,
 }
