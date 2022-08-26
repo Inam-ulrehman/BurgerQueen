@@ -8,7 +8,7 @@ import IconButton from '@mui/material/IconButton'
 import List from '@mui/material/List'
 import ListItem from '@mui/material/ListItem'
 import ListItemButton from '@mui/material/ListItemButton'
-import ListItemText from '@mui/material/ListItemText'
+// import ListItemText from '@mui/material/ListItemText'
 import MenuIcon from '@mui/icons-material/Menu'
 import Toolbar from '@mui/material/Toolbar'
 import Typography from '@mui/material/Typography'
@@ -18,7 +18,6 @@ import Logo from '../Logo'
 import { NavLink } from 'react-router-dom'
 
 const drawerWidth = 280
-const navItems = ['Home', 'About', 'Contact']
 
 function DrawerAppBar(props) {
   const { window } = props
