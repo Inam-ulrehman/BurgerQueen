@@ -23,6 +23,8 @@ const Wrapper = styled.div`
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  margin: 0 auto;
+
   .Logo {
     position: absolute;
     left: 50%;
@@ -53,20 +55,23 @@ const Wrapper = styled.div`
       background-color: #e9cca4;
     }
   }
-  @media (min-width: 600px) {
-    .Logo {
-      left: 20%;
-    }
-  }
+
   @media (min-width: 768px) {
     background: url(${comp});
     background-repeat: no-repeat;
     background-size: cover;
-    margin-top: 40px;
-    height: calc(100vh - 40px);
+    background-position: center;
+    background-position-y: 30px;
+    height: 100vh;
+  }
+  @media (min-width: 600px) {
     .hero {
       left: 80%;
-      top: 20%;
+      top: 80%;
+    }
+    .Logo {
+      left: 20%;
+      top: 80%;
     }
   }
 `
