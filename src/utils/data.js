@@ -18,16 +18,16 @@ import imageFour from '../images/5.png'
 export const navbarData = [
   { id: 1, path: '/', title: 'Home', icon: <AiOutlineHome /> },
 
-  { id: 3, path: '/contact', title: 'ContactUS', icon: <FaPhoneAlt /> },
   {
-    id: 4,
+    id: 3,
     path: '/products',
     title: 'Menu',
     icon: <CgMenuOreos />,
   },
-  { id: 5, path: '/user', title: 'SignUp', icon: <FaUserTie /> },
+  { id: 5, path: '/cart', title: 'Cart', icon: <IoMdCart /> },
+  { id: 4, path: '/user', title: 'SignUp', icon: <FaUserTie /> },
 
-  { id: 6, path: '/cart', title: 'Cart', icon: <IoMdCart /> },
+  { id: 2, path: '/contact', title: 'ContactUS', icon: <FaPhoneAlt /> },
 ]
 
 // ======Data for navbar=========End

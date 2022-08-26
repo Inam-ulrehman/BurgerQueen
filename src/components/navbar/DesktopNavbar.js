@@ -5,8 +5,8 @@ import Logo from '../Logo'
 const DesktopNavbar = () => {
   return (
     <Wrapper>
-      <Logo />
-      DesktopNavbar
+      {/* <Logo />
+      DesktopNavbar */}
     </Wrapper>
   )
 }

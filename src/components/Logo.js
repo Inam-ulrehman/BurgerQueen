@@ -8,14 +8,14 @@ const Logo = () => {
     <Wrapper>
       <Link to={'/'}>
         <Typography
-          variant='h3'
+          variant='h5'
           sx={{ display: 'inline', color: 'secondary.main' }}
         >
           Burger
         </Typography>
         <Typography
-          sx={{ display: 'inline', color: 'primary.main' }}
-          variant='h3'
+          sx={{ display: 'inline', color: 'primary.light' }}
+          variant='h5'
         >
           Queen
         </Typography>
