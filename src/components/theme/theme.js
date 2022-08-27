@@ -32,13 +32,24 @@ export const theme = createTheme({
     },
   },
   components: {
-    // Name of the component
+    // Name of the component  ========     Button
     MuiButton: {
       styleOverrides: {
         // Name of the slot
         root: {
           // Some CSS
           fontSize: '1rem',
+        },
+      },
+    },
+
+    // Name of the component  ========     Grid
+    MuiGrid: {
+      styleOverrides: {
+        // Name of the slot
+        root: {
+          // Some CSS
+          margin: '0',
         },
       },
     },

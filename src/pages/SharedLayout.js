@@ -20,9 +20,9 @@ const Wrapper = styled.main`
   .main-section {
     margin-top: 64px;
   }
-  @media (max-width: 768px) {
+  @media (min-width: 600px) {
     .main-section {
-      margin-top: 54px;
+      margin-top: 64px;
     }
   }
 `
