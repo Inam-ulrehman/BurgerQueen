@@ -17,12 +17,11 @@ import { Link } from 'react-router-dom'
 const LandingPageTwo = () => {
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <hr />
       <Grid container justifyContent='center'>
         {landingTwo.map((item, index) => {
           const { paragraph, path, image, buttonTitle } = item
           return (
-            <Card key={index} xs={12} md={6} sx={{ maxWidth: 340, m: 2 }}>
+            <Card key={index} sx={{ maxWidth: 340, m: 2 }}>
               <CardMedia
                 component='img'
                 height='140'
