@@ -8,10 +8,6 @@ import {
 import { CgMenuOreos } from 'react-icons/cg'
 import { FaUserTie, FaPhoneAlt, FaInstagramSquare } from 'react-icons/fa'
 import { IoMdCart } from 'react-icons/io'
-import imageOne from '../images/2.png'
-import imageTwo from '../images/3.png'
-import imageThree from '../images/4.png'
-import imageFour from '../images/5.png'
 
 // ======Data for navbar=========Start
 
@@ -112,7 +108,8 @@ export const landingTwo = [
             fugit quaerat dicta et tenetur eos. Nulla delectus rem alias eum
             error.`,
     path: '/user',
-    image: imageOne,
+    image:
+      'https://firebasestorage.googleapis.com/v0/b/burger-queen-6b0d2.appspot.com/o/2_800x800.png?alt=media&token=c8a8107c-03a6-4c18-815b-bfa9e683656a',
     buttonTitle: 'SignUp to Order',
   },
   {
@@ -124,7 +121,8 @@ export const landingTwo = [
             fugit quaerat dicta et tenetur eos. Nulla delectus rem alias eum
             error.`,
     path: '/user',
-    image: imageTwo,
+    image:
+      'https://firebasestorage.googleapis.com/v0/b/burger-queen-6b0d2.appspot.com/o/3_800x800.png?alt=media&token=ab2b725b-86e7-4c25-9d5e-4beadf05105c',
     buttonTitle: 'SignUp to Order',
   },
   {
@@ -136,7 +134,8 @@ export const landingTwo = [
             fugit quaerat dicta et tenetur eos. Nulla delectus rem alias eum
             error.`,
     path: '/products',
-    image: imageThree,
+    image:
+      'https://firebasestorage.googleapis.com/v0/b/burger-queen-6b0d2.appspot.com/o/4_800x800.png?alt=media&token=edef8b60-740a-4597-ac86-f9d69329f98b',
     buttonTitle: 'Special Offers',
   },
   {
@@ -148,7 +147,8 @@ export const landingTwo = [
             fugit quaerat dicta et tenetur eos. Nulla delectus rem alias eum
             error.`,
     path: '/products/breakfast',
-    image: imageFour,
+    image:
+      'https://firebasestorage.googleapis.com/v0/b/burger-queen-6b0d2.appspot.com/o/5_800x800.png?alt=media&token=d832fe01-8c27-4f86-80d4-5e12aa1e2b20',
     buttonTitle: 'BreakFast Menu',
   },
 ]
