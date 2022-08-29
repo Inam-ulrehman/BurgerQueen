@@ -32,9 +32,11 @@ const LandingPageTwo = () => {
                 <Typography variant='body2'>{paragraph}</Typography>
               </CardContent>
               <CardActions>
-                <Button variant='outlined'>
-                  <Link to={path}>{buttonTitle}</Link>
-                </Button>
+                <Link to={path}>
+                  <Button sx={{ color: 'primary' }} variant='outlined'>
+                    {buttonTitle}
+                  </Button>
+                </Link>
               </CardActions>
             </Card>
           )
