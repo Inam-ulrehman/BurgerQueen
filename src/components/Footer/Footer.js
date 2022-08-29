@@ -15,10 +15,10 @@ const Footer = () => {
       <div className='container'>
         <div className='social-media box-1'>
           <Subscribe />
-          <SocialMedia />
+          <Address />
         </div>
         <div className='box-2'>
-          <Address />
+          <SocialMedia />
         </div>
       </div>
       <CopyRight />
@@ -38,9 +38,6 @@ const Wrapper = styled.footer`
       gap: 1rem;
       grid-template-columns: 1fr 1fr;
       .box-2 {
-        display: grid;
-        justify-content: center;
-        place-items: center;
       }
     }
   }

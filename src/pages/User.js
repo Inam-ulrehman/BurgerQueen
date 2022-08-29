@@ -21,8 +21,9 @@ const User = () => {
   )
 }
 const Wrapper = styled.div`
-  height: calc(100vh - 64px);
-
+  overflow: hidden;
+  .box-1 {
+  }
   .box-2 {
     display: none;
     img {
@@ -36,11 +37,10 @@ const Wrapper = styled.div`
     .container {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      align-items: center;
+
       gap: 1rem;
       .box-1,
       .box-2 {
-        border: 5px solid black;
       }
     }
     .box-2 {

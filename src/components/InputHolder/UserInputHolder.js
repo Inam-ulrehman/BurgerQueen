@@ -1,3 +1,4 @@
+import { Button, TextField, Typography } from '@mui/material'
 import React from 'react'
 import { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
@@ -40,9 +41,7 @@ const UserInputHolder = () => {
 
   useEffect(() => {
     if (user.length === undefined) {
-      setTimeout(() => {
-        return navigate('/dashboard')
-      }, 100)
+      return navigate('/dashboard')
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [user.length])
@@ -57,19 +56,17 @@ const UserInputHolder = () => {
   return (
     <Wrapper>
       <form className='form' onSubmit={handleSubmit}>
-        <h5>{isMember ? 'Login' : 'Register'}</h5>
+        <Typography variant='h5'>{isMember ? 'Login' : 'Register'}</Typography>
         {/* name input */}
         {!isMember && (
           <div>
-            <label htmlFor='name' className='form-label'>
-              Name
-            </label>
-            <input
-              placeholder='First Name'
-              type='text'
-              className='form-input'
-              name='name'
+            <TextField
+              size='small'
               id='name'
+              label='Name'
+              variant='outlined'
+              type='text'
+              name='name'
               value={name}
               onChange={handleChange}
             />
@@ -78,43 +75,45 @@ const UserInputHolder = () => {
 
         {/* email input */}
         <div>
-          <label htmlFor='email' className='form-label'>
-            email
-          </label>
-          <input
-            placeholder='Email Address'
+          <TextField
+            sx={{ Width: '310px' }}
+            size='small'
+            id='outlined-basic'
+            label='Email'
+            variant='outlined'
             type='text'
-            className='form-input'
             name='email'
-            id='email'
             value={email}
             onChange={handleChange}
           />
         </div>
         {/* password input */}
         <div>
-          <label htmlFor='password' className='form-label'>
-            password
-          </label>
-          <input
-            placeholder='Password'
+          <TextField
+            size='small'
+            id='outlined-basic password'
+            label='Password'
+            variant='outlined'
             type='password'
-            className='form-input'
             name='password'
-            id='password'
             value={password}
             onChange={handleChange}
           />
         </div>
-        <button type='submit' className='btn btn-block'>
+        <Button type='submit' variant='outlined'>
           Submit
-        </button>
-        <p>
+        </Button>
+        <Typography>
           {isMember ? 'Are you register ?' : 'Are you a member ?'}{' '}
-          <button onClick={handleToggle} className='btn' type='button'>
+          <Button
+            size='small'
+            variant='text'
+            onClick={handleToggle}
+            type='button'
+          >
             {isMember ? 'Register' : 'Login'}
-          </button>
-        </p>
+          </Button>
+        </Typography>
       </form>
     </Wrapper>
   )
@@ -129,6 +128,10 @@ const Wrapper = styled.div`
   }
   .form {
     max-width: 400px;
+    display: grid;
+    gap: 1rem;
+  }
+  @media (min-width: 600px) {
   }
 `
 
