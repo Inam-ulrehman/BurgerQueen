@@ -28,6 +28,9 @@ const Wrapper = styled.div`
   background-color: var(--primary-10);
   border-radius: var(--radius);
   padding: 0 1rem;
+  h3 {
+    color: var(--primary-1);
+  }
   a {
     font-size: 1.2rem;
     color: var(--grey-6);

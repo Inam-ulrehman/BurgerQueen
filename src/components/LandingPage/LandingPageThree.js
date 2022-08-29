@@ -66,7 +66,7 @@ const Wrapper = styled.div`
     }
   }
   @media (min-width: 768px) {
-    height: 100vh;
+    height: calc(100vh - 64px);
   }
   @media (min-width: 900px) {
   }

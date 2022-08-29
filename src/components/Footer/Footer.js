@@ -12,25 +12,43 @@ const Footer = () => {
       <div className='logo-holder'>
         <Logo />
       </div>
-      <div className='social-media'>
-        <Subscribe />
-        <SocialMedia />
-        <Address />
+      <div className='container'>
+        <div className='social-media box-1'>
+          <Subscribe />
+          <SocialMedia />
+        </div>
+        <div className='box-2'>
+          <Address />
+        </div>
       </div>
       <CopyRight />
     </Wrapper>
   )
 }
 const Wrapper = styled.footer`
-  background-color: var(--primary-1);
+  background-color: var(--primary-4);
+  display: grid;
+  place-items: center;
   .logo-holder {
-    text-align: center;
-    margin: 1rem auto;
   }
-  .social-media {
-    div {
-      margin: 1rem auto;
+  @media (min-width: 600px) {
+    height: calc(100vh - 64px);
+    .container {
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: 1fr 1fr;
+      .box-2 {
+        display: grid;
+        justify-content: center;
+        place-items: center;
+      }
     }
+  }
+  @media (min-width: 768px) {
+  }
+  @media (min-width: 900px) {
+  }
+  @media (min-width: 1120px) {
   }
 `
 export default Footer

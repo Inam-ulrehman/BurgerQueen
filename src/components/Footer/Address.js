@@ -23,6 +23,9 @@ const Wrapper = styled.div`
   max-width: var(--mobile-width);
   background-color: var(--primary-10);
   padding: 0 10px;
+  h4 {
+    color: var(--primary-1);
+  }
   p {
     margin: 0;
     display: inline;
