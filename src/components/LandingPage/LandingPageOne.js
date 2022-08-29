@@ -9,7 +9,7 @@ const LandingPageOne = () => {
     <Wrapper>
       <div className='box-1'>
         <img src={image2} alt='' />
-        <Link className='btn' to={'/products'}>
+        <Link className='btns' to={'/products'}>
           <Button variant='contained'>Order Online</Button>
         </Link>
       </div>
@@ -30,7 +30,7 @@ const Wrapper = styled.div`
     img {
       width: 100%;
     }
-    .btn {
+    .btns {
       position: absolute;
       top: 80%;
       left: 50%;

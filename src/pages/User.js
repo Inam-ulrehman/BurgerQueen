@@ -1,33 +1,53 @@
 import React from 'react'
 import styled from 'styled-components'
 import UserInputHolder from '../components/InputHolder/UserInputHolder'
+import login from '../images/login.svg'
 
 const User = () => {
   return (
     <Wrapper className='api-box'>
-      <div className='logo-holder'>
-        <h1 className='title'>
-          Member <span>Area</span>
-        </h1>
+      <h1 className='title'>
+        Member <span>Area</span>
+      </h1>
+      <div className='container'>
+        <div className='box-2'>
+          <img src={login} alt='' />
+        </div>
+        <div className='box-1'>
+          <UserInputHolder />
+        </div>
       </div>
-      <div className='title-underline underline-create'></div>
-      {/* Login/Signup */}
-      <UserInputHolder />
     </Wrapper>
   )
 }
 const Wrapper = styled.div`
-  @media (max-width: 768px) {
-    .logo-holder {
-      margin-top: 4rem;
+  height: calc(100vh - 64px);
+
+  .box-2 {
+    display: none;
+    img {
+      width: 100%;
     }
   }
-  .style-create {
-    margin: 0 auto;
+  .title {
+    margin-top: 64px;
   }
-  .underline-create {
-    margin-top: 1rem;
+  @media (min-width: 768px) {
+    .container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 1rem;
+      .box-1,
+      .box-2 {
+        border: 5px solid black;
+      }
+    }
+    .box-2 {
+      display: grid;
+    }
   }
+
   span {
     color: var(--primary-5);
   }
