@@ -2,7 +2,6 @@ import { Button } from '@mui/material'
 import React from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
-
 import image2 from '../../images/homepage.png'
 
 const LandingPageOne = () => {
@@ -33,7 +32,7 @@ const Wrapper = styled.div`
     }
     .btn {
       position: absolute;
-      top: 70%;
+      top: 80%;
       left: 50%;
       transform: translate(-50%, -50%);
     }
