@@ -59,47 +59,45 @@ const UserInputHolder = () => {
         <Typography variant='h5'>{isMember ? 'Login' : 'Register'}</Typography>
         {/* name input */}
         {!isMember && (
-          <div>
-            <TextField
-              size='small'
-              id='name'
-              label='Name'
-              variant='outlined'
-              type='text'
-              name='name'
-              value={name}
-              onChange={handleChange}
-            />
-          </div>
+          <TextField
+            size='small'
+            id='name'
+            label='Name'
+            variant='outlined'
+            type='text'
+            name='name'
+            value={name}
+            onChange={handleChange}
+          />
         )}
 
         {/* email input */}
-        <div>
-          <TextField
-            sx={{ Width: '310px' }}
-            size='small'
-            id='outlined-basic'
-            label='Email'
-            variant='outlined'
-            type='text'
-            name='email'
-            value={email}
-            onChange={handleChange}
-          />
-        </div>
+
+        <TextField
+          sx={{ Width: '310px' }}
+          size='small'
+          id='outlined-basic'
+          label='Email'
+          variant='outlined'
+          type='text'
+          name='email'
+          value={email}
+          onChange={handleChange}
+        />
+
         {/* password input */}
-        <div>
-          <TextField
-            size='small'
-            id='outlined-basic password'
-            label='Password'
-            variant='outlined'
-            type='password'
-            name='password'
-            value={password}
-            onChange={handleChange}
-          />
-        </div>
+
+        <TextField
+          size='small'
+          id='outlined-basic password'
+          label='Password'
+          variant='outlined'
+          type='password'
+          name='password'
+          value={password}
+          onChange={handleChange}
+        />
+
         <Button type='submit' variant='outlined'>
           Submit
         </Button>
@@ -130,6 +128,9 @@ const Wrapper = styled.div`
     max-width: 400px;
     display: grid;
     gap: 1rem;
+    input {
+      max-width: 400px;
+    }
   }
   @media (min-width: 600px) {
   }
