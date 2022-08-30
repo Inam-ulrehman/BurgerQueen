@@ -33,4 +33,9 @@ window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })
 // import queryString from 'query-string'
 // const parsed = queryString.parse(location.search)
 // console.log(parsed)
-// =====================================
+
+// ================Capital first Letter=====================
+// function capitalizeFirstLetter(string) {
+//   return string.charAt(0).toUpperCase() + string.slice(1)
+// }
+// ========================
