@@ -7,7 +7,7 @@ const User = () => {
   return (
     <Wrapper className='api-box'>
       <h1 className='title'>
-        Member <span>Area</span>
+        Member <span>/ Area</span>
       </h1>
       <div className='container'>
         <div className='box-2'>

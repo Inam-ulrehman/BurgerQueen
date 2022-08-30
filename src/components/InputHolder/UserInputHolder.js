@@ -4,6 +4,7 @@ import { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import styled from 'styled-components'
+import LoginOutlinedIcon from '@mui/icons-material/LoginOutlined'
 import {
   getUserFormInput,
   toggleMember,
@@ -56,7 +57,17 @@ const UserInputHolder = () => {
   return (
     <Wrapper>
       <form className='form' onSubmit={handleSubmit}>
-        <Typography variant='h5'>{isMember ? 'Login' : 'Register'}</Typography>
+        <Typography variant='h5'>
+          {isMember ? (
+            <div className='form-heading'>
+              <p>Login</p> <LoginOutlinedIcon />
+            </div>
+          ) : (
+            <div className='form-heading'>
+              <p>Register</p> <LoginOutlinedIcon />
+            </div>
+          )}
+        </Typography>
         {/* name input */}
         {!isMember && (
           <TextField
@@ -130,6 +141,15 @@ const Wrapper = styled.div`
     gap: 1rem;
     input {
       max-width: 400px;
+    }
+  }
+  .form-heading {
+    p {
+      display: inline-flex;
+    }
+    svg {
+      margin-bottom: -5px;
+      color: var(--primary-5);
     }
   }
   @media (min-width: 600px) {

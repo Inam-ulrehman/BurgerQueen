@@ -7,7 +7,9 @@ const EmptyCart = () => {
     'https://res.cloudinary.com/inam6530/image/upload/v1659613084/emptycart_qc4khy.svg'
   return (
     <Wrapper>
-      <h1 className='title'>Empty Cart.</h1>
+      <h1 className='title'>
+        Empty <span>/ Cart</span>
+      </h1>
       <div className='title-underline'></div>
       <img src={image} alt='' />
       <div className='btn-holder'>
@@ -20,8 +22,14 @@ const EmptyCart = () => {
 }
 
 const Wrapper = styled.div`
+  height: calc(100vh - 64px);
   margin: 0 auto;
   text-align: center;
+  .title {
+    span {
+      color: var(--primary-5);
+    }
+  }
   img {
     margin-top: 1rem;
     max-width: 400px;
@@ -31,7 +39,6 @@ const Wrapper = styled.div`
   .btn-holder {
     text-align: center;
     a {
-      margin-top: 5rem;
     }
   }
 `

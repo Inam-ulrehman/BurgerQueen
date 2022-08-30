@@ -5,6 +5,7 @@ import CartHolder from '../components/Cart/CartHolder'
 import CashOrderName from '../components/Cart/CashOrderName'
 import { useState } from 'react'
 import { useSelector } from 'react-redux'
+import styled from 'styled-components'
 
 const Cart = () => {
   const { cart, user } = useSelector((state) => state)
@@ -18,7 +19,7 @@ const Cart = () => {
   }
 
   return (
-    <div>
+    <Wrapper>
       {showName && <CashOrderName handleHideName={handleHideName} />}
 
       <CartHolder />
@@ -36,8 +37,11 @@ const Cart = () => {
           </button>
         </div>
       ) : null}
-    </div>
+    </Wrapper>
   )
 }
 
+const Wrapper = styled.div`
+  margin-top: 64px;
+`
 export default Cart

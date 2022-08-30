@@ -40,126 +40,151 @@ const Contact = () => {
   }, [])
   return (
     <Wrapper>
-      <div className='heading-holder'>
-        <h1 className='title animate__backInUp'>
-          Contact <span className='span'> / Us</span>
-        </h1>
-        <img src={contactImage} alt='' />
+      <h1 className='title '>
+        Contact <span className='span'> / Us</span>
+      </h1>
+      <div className='container'>
+        <div className=' box-1'>
+          <img src={contactImage} alt='' />
+        </div>
+        <form className='form box-2' onSubmit={handleSubmit}>
+          {/* name input */}
+          <TextField
+            sx={{ width: '100%' }}
+            className='field'
+            label='Name'
+            variant='outlined'
+            type='text'
+            id='name'
+            name='name'
+            size='small'
+            value={contact.name}
+            onChange={handleChange}
+          />
+
+          {/* last name input */}
+          <TextField
+            sx={{ width: '100%' }}
+            className='field'
+            label='Last Name'
+            variant='outlined'
+            type='text'
+            id='lastName'
+            name='lastName'
+            size='small'
+            value={contact.lastName}
+            onChange={handleChange}
+          />
+
+          {/* email input */}
+          <TextField
+            sx={{ width: '100%' }}
+            className='field'
+            label='Email'
+            variant='outlined'
+            type='text'
+            id='email'
+            name='email'
+            size='small'
+            value={contact.email}
+            onChange={handleChange}
+          />
+
+          {/* mobile input */}
+          <TextField
+            sx={{ width: '100%' }}
+            className='field'
+            label='Mobile Number'
+            variant='outlined'
+            type='Number'
+            id='mobile'
+            name='mobile'
+            size='small'
+            value={contact.mobile}
+            onChange={handleChange}
+          />
+
+          {/* message input */}
+          <TextField
+            sx={{ width: '350px' }}
+            className='field'
+            label='Message Title'
+            variant='outlined'
+            type='text'
+            id='message'
+            name='message'
+            size='small'
+            value={contact.message}
+            onChange={handleChange}
+          />
+
+          {/* additional details input */}
+          <TextField
+            sx={{ width: '100%' }}
+            className='field'
+            label='Additional Details'
+            variant='outlined'
+            type='text'
+            id='details'
+            name='details'
+            multiline
+            rows={6}
+            value={contact.details}
+            onChange={handleChange}
+          />
+
+          <Button size='medium' variant='contained' type='submit'>
+            Submit
+          </Button>
+        </form>
       </div>
-      <form className='form' onSubmit={handleSubmit}>
-        <Logo />
-        {/* name input */}
-        <TextField
-          className='field'
-          label='Name'
-          variant='outlined'
-          type='text'
-          id='name'
-          name='name'
-          size='small'
-          value={contact.name}
-          onChange={handleChange}
-        />
-
-        {/* last name input */}
-        <TextField
-          className='field'
-          label='Last Name'
-          variant='outlined'
-          type='text'
-          id='lastName'
-          name='lastName'
-          size='small'
-          value={contact.lastName}
-          onChange={handleChange}
-        />
-
-        {/* email input */}
-        <TextField
-          className='field'
-          label='Email'
-          variant='outlined'
-          type='text'
-          id='email'
-          name='email'
-          size='small'
-          value={contact.email}
-          onChange={handleChange}
-        />
-
-        {/* mobile input */}
-        <TextField
-          className='field'
-          label='Mobile Number'
-          variant='outlined'
-          type='Number'
-          id='mobile'
-          name='mobile'
-          size='small'
-          value={contact.mobile}
-          onChange={handleChange}
-        />
-
-        {/* message input */}
-        <TextField
-          className='field'
-          label='Message Title'
-          variant='outlined'
-          type='text'
-          id='message'
-          name='message'
-          size='small'
-          value={contact.message}
-          onChange={handleChange}
-        />
-
-        {/* additional details input */}
-        <TextField
-          className='field'
-          label='Additional Details'
-          variant='outlined'
-          type='text'
-          id='details'
-          name='details'
-          multiline
-          rows={6}
-          value={contact.details}
-          onChange={handleChange}
-        />
-
-        <Button size='medium' variant='contained' type='submit'>
-          Submit
-        </Button>
-      </form>
     </Wrapper>
   )
 }
 const Wrapper = styled.div`
-  .field {
-    margin-top: 1rem;
+  margin-top: 64px;
+  .MuiFormControl-root {
+    display: block;
   }
-  .heading-holder .title {
+  .MuiButton-root {
+    margin-top: 5px;
+  }
+  .title {
+    margin-bottom: 0;
     span {
       color: var(--primary-5);
     }
   }
-  .heading-holder {
-    text-align: center;
+
+  .container {
+    display: grid;
+    justify-content: center;
+    padding: 0px 1rem;
+  }
+  .box-1,
+  .box-2 {
+  }
+  .box-1 {
+    display: none;
+
     img {
-      max-width: 300px;
+      width: 100%;
     }
+  }
+  .box-2 {
+    margin-top: auto;
+  }
+  .MuiFormControl-root {
+    margin-top: 10px;
   }
   @media (min-width: 768px) {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-
-    .heading-holder {
-      display: grid;
-      align-content: center;
+    .container {
+      grid-template-columns: 1fr 1fr;
     }
-  }
-  .btnMui {
-    margin-top: 1rem;
+    .box-1 {
+      display: grid;
+      place-items: center;
+    }
   }
 `
 export default Contact

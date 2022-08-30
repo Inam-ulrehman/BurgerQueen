@@ -12,5 +12,6 @@ const CopyRight = () => {
 }
 const Wrapper = styled.footer`
   background-color: var(--primary-9);
+  overflow: hidden;
 `
 export default CopyRight
