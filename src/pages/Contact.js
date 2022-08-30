@@ -49,7 +49,7 @@ const Contact = () => {
         <form className='form box-2' onSubmit={handleSubmit}>
           {/* name input */}
           <TextField
-            sx={{ width: '100%' }}
+            fullWidth={true}
             className='field'
             label='Name'
             variant='outlined'
@@ -63,7 +63,7 @@ const Contact = () => {
 
           {/* last name input */}
           <TextField
-            sx={{ width: '100%' }}
+            fullWidth={true}
             className='field'
             label='Last Name'
             variant='outlined'
@@ -77,7 +77,7 @@ const Contact = () => {
 
           {/* email input */}
           <TextField
-            sx={{ width: '100%' }}
+            fullWidth={true}
             className='field'
             label='Email'
             variant='outlined'
@@ -91,7 +91,7 @@ const Contact = () => {
 
           {/* mobile input */}
           <TextField
-            sx={{ width: '100%' }}
+            fullWidth={true}
             className='field'
             label='Mobile Number'
             variant='outlined'
@@ -105,7 +105,7 @@ const Contact = () => {
 
           {/* message input */}
           <TextField
-            sx={{ width: '350px' }}
+            fullWidth={true}
             className='field'
             label='Message Title'
             variant='outlined'
@@ -119,7 +119,7 @@ const Contact = () => {
 
           {/* additional details input */}
           <TextField
-            sx={{ width: '100%' }}
+            fullWidth={true}
             className='field'
             label='Additional Details'
             variant='outlined'

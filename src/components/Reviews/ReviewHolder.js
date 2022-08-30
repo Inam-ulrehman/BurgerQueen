@@ -1,6 +1,7 @@
 import React from 'react'
 import moment from 'moment'
 import Stars from '../Cards/Stars'
+import styled from 'styled-components'
 
 const ReviewHolder = ({ review }) => {
   const { reviews, total, isLoading } = review
@@ -14,23 +15,62 @@ const ReviewHolder = ({ review }) => {
   }
 
   return (
-    <div>
-      <h1>Total Reviews count : {total}</h1>
-      {reviews
-        .map((item) => {
-          const { createdAt, _id, name, reviewInput, starValue } = item
-          return (
-            <div key={_id}>
-              <Stars starValue={starValue} />
-              <h4>{name}</h4>
-              <p>{reviewInput}</p>
-              <p>{moment(createdAt).format('MMM Do YY')}</p>
-            </div>
-          )
-        })
-        .reverse()}
-    </div>
+    <Wrapper>
+      <h1 className='title'>
+        Total Reviews count : <span>{total}</span>
+      </h1>
+
+      <div className='container'>
+        {reviews
+          .map((item) => {
+            const { createdAt, _id, name, reviewInput, starValue } = item
+            return (
+              <div className='box-1' key={_id}>
+                <div className='rating'>
+                  <h4>{name}</h4>
+                  <Stars starValue={starValue} />
+                </div>
+                <div className='body-input'>
+                  <p>Review: {reviewInput}</p>
+                </div>
+                <p>Created At: {moment(createdAt).format('MMM Do YY')}</p>
+              </div>
+            )
+          })
+          .reverse()}
+      </div>
+    </Wrapper>
   )
 }
-
+const Wrapper = styled.div`
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .box-1 {
+    margin: 5px;
+    padding: 1rem;
+    width: 300px;
+    background-color: var(--white);
+    box-shadow: var(--shadow-1);
+    .rating {
+      display: flex;
+      align-items: center;
+      h4 {
+        margin-right: 1rem;
+      }
+    }
+    .body-input {
+      background-color: pink;
+      p {
+        overflow-wrap: anywhere;
+        margin: 0;
+      }
+    }
+  }
+  @media (min-width: 600px) {
+  }
+  @media (min-width: 920px) {
+  }
+`
 export default ReviewHolder
