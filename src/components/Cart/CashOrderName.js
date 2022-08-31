@@ -16,7 +16,6 @@ const CashOrderName = ({ handleHideName }) => {
   // const handle Submit
   const handleSubmit = (e) => {
     const { name } = cart
-    console.log(name)
     e.preventDefault()
     navigate('/payCash')
     dispatch(postCashOrderThunk({ name, payCash: cart.cart }))

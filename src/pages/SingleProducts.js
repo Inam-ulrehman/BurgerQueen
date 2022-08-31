@@ -99,6 +99,7 @@ const SingleProducts = () => {
 }
 const Wrapper = styled.div`
   margin-top: 64px;
+
   .link-container {
     a {
       margin-right: 5px;
@@ -108,6 +109,7 @@ const Wrapper = styled.div`
     width: 100%;
   }
   .main-container {
+    min-height: calc(100vh - 64px);
   }
 
   /* Single Item Css */

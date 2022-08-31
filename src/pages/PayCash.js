@@ -1,5 +1,6 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
+import styled from 'styled-components'
 
 const PayCash = () => {
   const { isLoading, name, cashOrderId, payCash, total } = useSelector(
@@ -13,7 +14,7 @@ const PayCash = () => {
       </div>
     )
   return (
-    <div>
+    <Wrapper>
       <p>
         Dear {name}, Your order is preparing . Your order number is{' '}
         {cashOrderId}{' '}
@@ -28,8 +29,13 @@ const PayCash = () => {
           </div>
         )
       })}
-    </div>
+    </Wrapper>
   )
 }
+
+const Wrapper = styled.div`
+  min-height: 100vh;
+  margin-top: 64px;
+`
 
 export default PayCash
