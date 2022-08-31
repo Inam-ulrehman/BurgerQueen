@@ -1,26 +1,34 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import CartHolder from '../components/Cart/CartHolder'
-
 import CashOrderName from '../components/Cart/CashOrderName'
-import { useState } from 'react'
 import { useSelector } from 'react-redux'
 import styled from 'styled-components'
+import { Button } from '@mui/material'
 
 const Cart = () => {
   const { cart, user } = useSelector((state) => state)
-  const [showName, setShowName] = useState(false)
 
-  const handleShowName = (e) => {
-    setShowName(true)
+  // ===========================================
+  const [open, setOpen] = React.useState(false)
+  const handleClickOpen = () => {
+    setOpen(true)
   }
-  const handleHideName = (e) => {
-    setShowName(false)
+  const handleClose = () => {
+    setOpen(false)
   }
+
+  // ====================================
 
   return (
     <Wrapper>
-      {showName && <CashOrderName handleHideName={handleHideName} />}
+      {open && (
+        <CashOrderName
+          handleClose={handleClose}
+          open={open}
+          setOpen={setOpen}
+        />
+      )}
 
       {/* Buttons onlinePay-CashPay */}
       {cart.cart.length > 0 ? (
@@ -31,9 +39,9 @@ const Cart = () => {
           >
             PayOnline
           </Link>
-          <button className='btn' type='button' onClick={handleShowName}>
-            payCash
-          </button>
+          <Button variant='outlined' onClick={handleClickOpen}>
+            Pay Cash
+          </Button>
         </div>
       ) : null}
       <CartHolder />
