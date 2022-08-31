@@ -6,6 +6,7 @@ import { calculateTotal, removeCart } from '../../features/cart/cartSlice'
 import EmptyCart from './EmptyCart'
 import { formatPrice } from '../../utils/helper'
 import SingleCartItem from './SingleCartItem'
+import AlertDialog from '../Cards/AlertDialog'
 const CartHolder = () => {
   const dispatch = useDispatch()
   const { cart, total } = useSelector((state) => {
@@ -22,14 +23,14 @@ const CartHolder = () => {
         return <SingleCartItem key={index} {...item} />
       })}
       <div className='empty-cart-button'>
-        <button
-          type='button'
-          className='btn '
-          onClick={() => dispatch(removeCart())}
-        >
-          empty cart
-        </button>
+        <AlertDialog
+          content={'Do you really want to empty your cart ?'}
+          title={'Alert'}
+          buttonText={'Empty Cart'}
+          action={removeCart()}
+        />
       </div>
+
       <hr />
       <div className='total'>
         <h2>Amount </h2>

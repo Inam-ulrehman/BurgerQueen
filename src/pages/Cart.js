@@ -33,11 +33,15 @@ const Cart = () => {
       {/* Buttons onlinePay-CashPay */}
       {cart.cart.length > 0 ? (
         <div className='btn-holder'>
-          <Link
-            to={user.user.length === 0 ? '/user' : '/dashboard/payment'}
-            className='btn'
-          >
-            PayOnline
+          <Link to='/products'>
+            <Button variant='outlined' onClick={handleClickOpen}>
+              Menu
+            </Button>
+          </Link>
+          <Link to={user.user.length === 0 ? '/user' : '/dashboard/payment'}>
+            <Button variant='outlined' onClick={handleClickOpen}>
+              Pay Online
+            </Button>
           </Link>
           <Button variant='outlined' onClick={handleClickOpen}>
             Pay Cash
@@ -55,9 +59,9 @@ const Wrapper = styled.div`
   .btn-holder {
     margin-top: 6%;
     display: flex;
-    place-items: center;
-    flex-direction: column-reverse;
+    justify-content: center;
     gap: 1rem;
+    padding-top: 1rem;
   }
 `
 export default Cart

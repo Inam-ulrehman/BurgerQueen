@@ -22,7 +22,9 @@ const ErrorPage = () => {
 const Wrapper = styled.section`
   text-align: center;
   height: 100vh;
+
   .img {
+    padding-top: 5rem;
     img {
       max-width: 400px;
       max-height: 400px;

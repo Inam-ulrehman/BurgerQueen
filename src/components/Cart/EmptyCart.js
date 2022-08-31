@@ -1,10 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
-
+import image from '../../images/cart.svg'
 const EmptyCart = () => {
-  const image =
-    'https://res.cloudinary.com/inam6530/image/upload/v1659613084/emptycart_qc4khy.svg'
   return (
     <Wrapper>
       <h1 className='title'>
