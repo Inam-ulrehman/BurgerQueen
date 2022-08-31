@@ -26,7 +26,7 @@ const TypeProducts = () => {
   return (
     <Wrapper>
       <h1 className='title'>
-        BurgerQueen <span>/ Menu / Breakfast</span>
+        BurgerQueen <span>/ Menu / {params.type}</span>
       </h1>
       <Link to='/products' className='btn'>
         <MenuOpenIcon /> <p>menu</p>
