@@ -9,7 +9,7 @@ const SharedDashboardLayout = () => {
   return (
     <Wrapper>
       <MobileNavbar />
-      <div className='section'>
+      <div className='shared-dashboard'>
         <div>
           <Link to='/dashboard/profile' className='btn'>
             Profile
@@ -34,9 +34,9 @@ const SharedDashboardLayout = () => {
 }
 
 const Wrapper = styled.section`
-  @media (max-width: 768px) {
-    .section {
-    }
+  .shared-dashboard {
+    margin-top: 4.3rem;
+    min-height: calc(100vh - 4.3rem);
   }
 `
 
