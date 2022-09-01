@@ -36,7 +36,6 @@ const SharedDashboardLayout = () => {
 const Wrapper = styled.section`
   @media (max-width: 768px) {
     .section {
-      margin-top: 3.7rem;
     }
   }
 `

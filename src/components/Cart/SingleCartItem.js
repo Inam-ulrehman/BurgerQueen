@@ -1,3 +1,5 @@
+import AddIcon from '@mui/icons-material/Add'
+import RemoveIcon from '@mui/icons-material/Remove'
 import { Button } from '@mui/material'
 import React from 'react'
 import { useDispatch } from 'react-redux'
@@ -37,7 +39,7 @@ const SingleCartItem = ({ name, _id, total, image, price }) => {
             className='btn'
             onClick={() => handleIncrease(_id)}
           >
-            +
+            <AddIcon />
           </Button>
           <span className='btn-hipster'>{total}</span>
           <Button
@@ -45,7 +47,7 @@ const SingleCartItem = ({ name, _id, total, image, price }) => {
             className='btn'
             onClick={() => handleDecrease(_id)}
           >
-            -
+            <RemoveIcon />
           </Button>
         </div>
         <button

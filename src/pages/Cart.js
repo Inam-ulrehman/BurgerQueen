@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import CartHolder from '../components/Cart/CartHolder'
 import CashOrderName from '../components/Cart/CashOrderName'
@@ -19,7 +19,9 @@ const Cart = () => {
   }
 
   // ====================================
-
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: 'auto' })
+  }, [])
   return (
     <Wrapper>
       {open && (
@@ -57,7 +59,6 @@ const Wrapper = styled.div`
   margin-top: 64px;
   min-height: calc(100vh - 64px);
   .btn-holder {
-    margin-top: 6%;
     display: flex;
     justify-content: center;
     gap: 1rem;

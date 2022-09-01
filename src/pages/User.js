@@ -1,9 +1,12 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import styled from 'styled-components'
 import UserInputHolder from '../components/InputHolder/UserInputHolder'
 import login from '../images/login.svg'
 
 const User = () => {
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: 'auto' })
+  }, [])
   return (
     <Wrapper className='api-box'>
       <h1 className='title'>
