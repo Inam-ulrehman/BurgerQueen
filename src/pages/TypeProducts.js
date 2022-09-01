@@ -59,7 +59,7 @@ const Wrapper = styled.div`
   }
 
   .btn {
-    position: sticky;
+    position: fixed;
     top: 80%;
     left: 80%;
     p {
