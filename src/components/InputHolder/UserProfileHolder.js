@@ -1,6 +1,8 @@
+import { Button, TextField } from '@mui/material'
 import React from 'react'
 import { useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
+import { toast } from 'react-toastify'
 import {
   getLoginUserThunk,
   getUserProfile,
@@ -24,8 +26,6 @@ const UserProfileHolder = () => {
   } = useSelector((state) => state.userProfile)
   // handleSubmit=====
   const handleSubmit = (e) => {
-    e.preventDefault()
-    console.log(e.target)
     dispatch(
       postLoginUserThunk({
         name,
@@ -59,138 +59,134 @@ const UserProfileHolder = () => {
       </div>
     )
   }
+
   return (
     <div>
-      <form onSubmit={handleSubmit} className='form'>
+      <form onSubmit={handleSubmit} className='profile-container '>
         {/* name input */}
-        <div>
-          <label htmlFor='name' className='form-label'>
-            Name
-          </label>
-          <input
-            className='form-input'
-            type='text'
-            name='name'
-            id='name'
-            value={name}
-            onChange={handleChange}
-          />
-        </div>
+
+        <TextField
+          className='profile-box-1'
+          size='small'
+          type='text'
+          id='outlined-multiline-static'
+          label='Name'
+          multiline
+          name='name'
+          value={name}
+          onChange={handleChange}
+        />
+
         {/* Last name input */}
-        <div>
-          <label htmlFor='lastName' className='form-label'>
-            Last Name
-          </label>
-          <input
-            className='form-input'
-            type='text'
-            name='lastName'
-            id='lastName'
-            value={lastName}
-            onChange={handleChange}
-          />
-        </div>
+        <TextField
+          className='profile-box-1'
+          size='small'
+          type='text'
+          id='outlined-multiline-static'
+          label='LastName'
+          multiline
+          name='lastName'
+          value={lastName}
+          onChange={handleChange}
+        />
+
         {/* date of birth input */}
-        <div>
-          <label htmlFor='dateOfBirth' className='form-label'>
-            Date of birth
-          </label>
-          <input
-            className='form-input'
-            type='text'
-            name='dateOfBirth'
-            id='dateOfBirth'
-            value={dateOfBirth}
-            onChange={handleChange}
-          />
-        </div>
+        <TextField
+          className='profile-box-1'
+          size='small'
+          type='text'
+          id='outlined-multiline-static'
+          label='Date of Birth'
+          multiline
+          name='dateOfBirth'
+          value={dateOfBirth}
+          onChange={handleChange}
+        />
+
         {/* mobile input */}
-        <div>
-          <label htmlFor='mobile' className='form-label'>
-            mobile
-          </label>
-          <input
-            className='form-input'
-            type='text'
-            name='mobile'
-            id='mobile'
-            value={mobile}
-            onChange={handleChange}
-          />
-        </div>
+        <TextField
+          className='profile-box-1'
+          size='small'
+          type='number'
+          id='outlined-multiline-static'
+          label='Mobile Number'
+          multiline
+          name='mobile'
+          value={mobile}
+          onChange={handleChange}
+        />
+
         {/*house input */}
-        <div>
-          <label htmlFor='house' className='form-label'>
-            house No
-          </label>
-          <input
-            className='form-input'
-            type='text'
-            name='house'
-            id='house'
-            value={house}
-            onChange={handleChange}
-          />
-        </div>
+        <TextField
+          className='profile-box-1'
+          size='small'
+          type='text'
+          id='outlined-multiline-static'
+          label='House No'
+          multiline
+          name='house'
+          value={house}
+          onChange={handleChange}
+        />
+
         {/*street input */}
-        <div>
-          <label htmlFor='street' className='form-label'>
-            street
-          </label>
-          <input
-            className='form-input'
-            type='text'
-            name='street'
-            id='street'
-            value={street}
-            onChange={handleChange}
-          />
-        </div>
+        <TextField
+          className='profile-box-1'
+          size='small'
+          type='text'
+          id='outlined-multiline-static'
+          label='Street'
+          multiline
+          name='street'
+          value={street}
+          onChange={handleChange}
+        />
+
         {/*town input */}
-        <div>
-          <label htmlFor='town' className='form-label'>
-            town
-          </label>
-          <input
-            className='form-input'
-            type='text'
-            name='town'
-            id='town'
-            value={town}
-            onChange={handleChange}
-          />
-        </div>
+        <TextField
+          className='profile-box-1'
+          size='small'
+          type='text'
+          id='outlined-multiline-static'
+          label='Town'
+          multiline
+          name='town'
+          value={town}
+          onChange={handleChange}
+        />
+
         {/*province input */}
-        <div>
-          <label htmlFor='province' className='form-label'>
-            province
-          </label>
-          <input
-            className='form-input'
-            type='text'
-            name='province'
-            id='province'
-            value={province}
-            onChange={handleChange}
-          />
-        </div>
+        <TextField
+          className='profile-box-1'
+          size='small'
+          type='text'
+          id='outlined-multiline-static'
+          label='Province'
+          multiline
+          name='province'
+          value={province}
+          onChange={handleChange}
+        />
+
         {/*country input */}
-        <div>
-          <label htmlFor='country' className='form-label'>
-            country
-          </label>
-          <input
-            className='form-input'
-            type='text'
-            name='country'
-            id='country'
-            value={country}
-            onChange={handleChange}
-          />
-        </div>
-        <button type='submit' className='btn btn-block'>
+        <TextField
+          className='profile-box-1'
+          size='small'
+          type='text'
+          id='outlined-multiline-static'
+          label='Country'
+          name='country'
+          value={country}
+          onChange={handleChange}
+        />
+
+        <Button
+          onClick={() => toast.success('Profile updated')}
+          variant='contained'
+          type='submit'
+        >
           Submit
-        </button>
+        </Button>
       </form>
     </div>
   )

@@ -18,6 +18,7 @@ const SharedLayout = () => {
 
 const Wrapper = styled.main`
   .main-section {
+    overflow: hidden;
   }
   @media (min-width: 600px) {
     .main-section {

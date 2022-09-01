@@ -1,3 +1,4 @@
+import { Button } from '@mui/material'
 import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { logeOutUser } from '../../features/user/userSlice'
@@ -8,9 +9,9 @@ const LogOut = () => {
   return (
     <>
       {user.length !== 0 ? (
-        <button className='btn' onClick={() => dispatch(logeOutUser())}>
+        <Button className='btn' onClick={() => dispatch(logeOutUser())}>
           LogOut
-        </button>
+        </Button>
       ) : null}
     </>
   )

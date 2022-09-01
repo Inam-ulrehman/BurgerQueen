@@ -46,7 +46,7 @@ const Contact = () => {
         <div className=' box-1'>
           <img src={contactImage} alt='' />
         </div>
-        <form className='form box-2' onSubmit={handleSubmit}>
+        <form className=' box-2' onSubmit={handleSubmit}>
           {/* name input */}
           <TextField
             fullWidth={true}
@@ -141,7 +141,7 @@ const Contact = () => {
   )
 }
 const Wrapper = styled.div`
-  margin-top: 64px;
+  min-height: 100vh;
   .MuiFormControl-root {
     display: block;
   }

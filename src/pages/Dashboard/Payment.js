@@ -6,6 +6,7 @@ import { useSelector } from 'react-redux/es/exports'
 import CheckoutForm from './CheckoutForm'
 import styled from 'styled-components'
 import axios from 'axios'
+import { formatPrice } from '../../utils/helper'
 
 // Make sure to call loadStripe outside of a component’s render to avoid
 // recreating the Stripe object on every render.
@@ -24,10 +25,10 @@ const Payment = () => {
         'https://burgerqueenbyinam.herokuapp.com/create-payment-intent',
         { cart, total }
       )
-      console.log(response)
+      // console.log(response)
       setClientSecret(response.data.clientSecret)
     } catch (error) {
-      console.log(error.response)
+      // console.log(error.response)
     }
   }
   useEffect(() => {
@@ -43,9 +44,10 @@ const Payment = () => {
   }
   return (
     <Wrapper>
-      <h4>payment page </h4>
-      <p>Total bill paying {total}</p>
-      <p>Test card 4242 4242 4242 4242 and exp 12 /34</p>
+      <div className='heading'>
+        <p>Total bill: {formatPrice(total)}</p>
+        <p>Test card 4242 4242 4242 4242 and exp 12 /34</p>
+      </div>
 
       <div className='App'>
         {clientSecret && (
@@ -59,6 +61,14 @@ const Payment = () => {
 }
 
 const Wrapper = styled.div`
+  display: grid;
+  place-items: center;
+  .heading {
+    margin-top: 10px;
+    p {
+      margin: 0;
+    }
+  }
   form {
     width: 30vw;
     min-width: 500px;
