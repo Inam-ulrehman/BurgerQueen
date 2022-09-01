@@ -12,9 +12,11 @@ import MenuIcon from '@mui/icons-material/Menu'
 import Toolbar from '@mui/material/Toolbar'
 import Typography from '@mui/material/Typography'
 import Button from '@mui/material/Button'
-import { navbarData } from '../../utils/data'
+import { navbarData, navbarMemberData } from '../../utils/data'
 import Logo from '../Logo'
 import { NavLink } from 'react-router-dom'
+import styled from 'styled-components'
+import { useSelector } from 'react-redux'
 
 const drawerWidth = 280
 
@@ -25,6 +27,11 @@ function DrawerAppBar(props) {
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen)
   }
+  // Logic to see if user is there then change data.=======
+  const { user: isUser } = useSelector((state) => {
+    return state.user
+  })
+  const isUserTrue = isUser.length === undefined
 
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
@@ -33,9 +40,9 @@ function DrawerAppBar(props) {
       </Typography>
       <Divider />
       <List>
-        {navbarData.map((item) => (
+        {(isUserTrue ? navbarMemberData : navbarData).map((item) => (
           <ListItem key={item.id} disablePadding>
-            <ListItemButton sx={{ display: 'grid', justifyContent: 'center' }}>
+            <ListItemButton sx={{ display: 'grid' }}>
               <NavLink key={item.id} to={item.path}>
                 <Button size='small' variant='contained' sx={{ mr: 1 }}>
                   {item.title}
@@ -52,58 +59,66 @@ function DrawerAppBar(props) {
     window !== undefined ? () => window().document.body : undefined
 
   return (
-    <Box sx={{ display: 'flex' }}>
-      <AppBar component='nav'>
-        <Toolbar>
-          <IconButton
-            color='inherit'
-            aria-label='open drawer'
-            edge='start'
-            onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { sm: 'none' } }}
+    <Wrapper>
+      <Box sx={{ display: 'flex' }}>
+        <AppBar component='nav'>
+          <Toolbar>
+            <IconButton
+              color='inherit'
+              aria-label='open drawer'
+              edge='start'
+              onClick={handleDrawerToggle}
+              sx={{ mr: 2, display: { sm: 'none' } }}
+            >
+              <MenuIcon />
+            </IconButton>
+            <Typography
+              variant='h6'
+              component='div'
+              sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
+            >
+              <Logo />
+            </Typography>
+            <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
+              {(isUserTrue ? navbarMemberData : navbarData).map((item) => {
+                return (
+                  <NavLink key={item.id} to={item.path}>
+                    <Button size='small' variant='contained' sx={{ mr: 1 }}>
+                      {item.title}
+                    </Button>
+                  </NavLink>
+                )
+              })}
+            </Box>
+          </Toolbar>
+        </AppBar>
+        <Box component='nav'>
+          <Drawer
+            container={container}
+            variant='temporary'
+            open={mobileOpen}
+            onClose={handleDrawerToggle}
+            ModalProps={{
+              keepMounted: true, // Better open performance on mobile.
+            }}
+            sx={{
+              display: { xs: 'block', sm: 'none' },
+              '& .MuiDrawer-paper': {
+                boxSizing: 'border-box',
+                width: drawerWidth,
+              },
+            }}
           >
-            <MenuIcon />
-          </IconButton>
-          <Typography
-            variant='h6'
-            component='div'
-            sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
-          >
-            <Logo />
-          </Typography>
-          <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
-            {navbarData.map((item) => (
-              <NavLink key={item.id} to={item.path}>
-                <Button size='small' variant='contained' sx={{ mr: 1 }}>
-                  {item.title}
-                </Button>
-              </NavLink>
-            ))}
-          </Box>
-        </Toolbar>
-      </AppBar>
-      <Box component='nav'>
-        <Drawer
-          container={container}
-          variant='temporary'
-          open={mobileOpen}
-          onClose={handleDrawerToggle}
-          ModalProps={{
-            keepMounted: true, // Better open performance on mobile.
-          }}
-          sx={{
-            display: { xs: 'block', sm: 'none' },
-            '& .MuiDrawer-paper': {
-              boxSizing: 'border-box',
-              width: drawerWidth,
-            },
-          }}
-        >
-          {drawer}
-        </Drawer>
+            {drawer}
+          </Drawer>
+        </Box>
       </Box>
-    </Box>
+    </Wrapper>
   )
 }
-
+const Wrapper = styled.div`
+  .MuiToolbar-root {
+    min-height: 64px;
+  }
+`
 export default DrawerAppBar

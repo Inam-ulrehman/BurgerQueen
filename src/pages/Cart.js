@@ -56,7 +56,6 @@ const Cart = () => {
 }
 
 const Wrapper = styled.div`
-  margin-top: 64px;
   min-height: calc(100vh - 64px);
   .btn-holder {
     display: flex;

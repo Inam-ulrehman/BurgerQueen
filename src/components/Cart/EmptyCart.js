@@ -8,7 +8,7 @@ const EmptyCart = () => {
       <h1 className='title'>
         Empty <span>/ Cart</span>
       </h1>
-      <div className='title-underline'></div>
+
       <img src={image} alt='' />
       <div className='btn-holder'>
         <Link className='btn' to='/products'>
@@ -24,6 +24,7 @@ const Wrapper = styled.div`
   margin: 0 auto;
   text-align: center;
   .title {
+    margin: 0;
     span {
       color: var(--primary-5);
     }

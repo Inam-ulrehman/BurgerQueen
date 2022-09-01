@@ -25,6 +25,20 @@ export const navbarData = [
 
   { id: 2, path: '/contact', title: 'ContactUS', icon: <FaPhoneAlt /> },
 ]
+export const navbarMemberData = [
+  { id: 1, path: '/', title: 'Home', icon: <AiOutlineHome /> },
+
+  {
+    id: 3,
+    path: '/products',
+    title: 'Menu',
+    icon: <CgMenuOreos />,
+  },
+  { id: 5, path: '/cart', title: 'Cart', icon: <IoMdCart /> },
+  { id: 4, path: '/user', title: 'DashBoard', icon: <FaUserTie /> },
+
+  { id: 2, path: '/contact', title: 'ContactUS', icon: <FaPhoneAlt /> },
+]
 
 // ======Data for navbar=========End
 // ======Data for SocialIcons=====Start

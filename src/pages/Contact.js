@@ -141,7 +141,7 @@ const Contact = () => {
   )
 }
 const Wrapper = styled.div`
-  min-height: 100vh;
+  min-height: calc(100vh - 64px);
   .MuiFormControl-root {
     display: block;
   }
@@ -149,7 +149,7 @@ const Wrapper = styled.div`
     margin-top: 5px;
   }
   .title {
-    margin-bottom: 0;
+    margin: 0;
     span {
       color: var(--primary-5);
     }

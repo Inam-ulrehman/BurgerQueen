@@ -24,7 +24,7 @@ const User = () => {
   )
 }
 const Wrapper = styled.div`
-  min-height: 100vh;
+  min-height: calc(100vh - 64px);
   overflow: hidden;
   .box-1 {
   }
@@ -35,7 +35,7 @@ const Wrapper = styled.div`
     }
   }
   .title {
-    margin-top: 64px;
+    margin: 0;
   }
   @media (min-width: 768px) {
     .container {

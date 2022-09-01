@@ -17,6 +17,7 @@ const SharedLayout = () => {
 }
 
 const Wrapper = styled.main`
+  margin-top: 64px;
   .main-section {
     overflow: hidden;
   }

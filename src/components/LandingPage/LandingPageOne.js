@@ -20,15 +20,12 @@ const LandingPageOne = () => {
 }
 
 const Wrapper = styled.div`
-  height: 100vh;
+  min-height: calc(100vh - 64px);
   display: grid;
   place-items: center;
   background-color: #ff872e;
-  overflow: hidden;
 
   .box-1 {
-    overflow: hidden;
-
     img {
       width: 100%;
     }
@@ -43,9 +40,6 @@ const Wrapper = styled.div`
   @media (min-width: 600px) {
   }
   @media (min-width: 768px) {
-    img {
-      margin-top: 5rem;
-    }
   }
   @media (min-width: 900px) {
   }
