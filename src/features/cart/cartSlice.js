@@ -18,6 +18,7 @@ const initialState = {
   cart: getCartFromLocalStorage() || [],
   total: 0,
   isLoading: false,
+  customerOrdersData: [],
 }
 
 // Sent Order to CashOrder BackEnd....
@@ -91,7 +92,7 @@ export const getallOnlineOrderThunk = createAsyncThunk(
           },
         }
       )
-      console.log(response.data)
+
       return response.data
     } catch (error) {
       return thunkAPI.rejectWithValue(error.response.data)
@@ -184,7 +185,7 @@ const cartSlice = createSlice({
       state.isLoading = false
       toast.error(payload)
     },
-    // =========OnlineOrder========
+    // =========OnlineOrder post========
     [postOnlineOrderThunk.pending]: (state, { payload }) => {
       state.isLoading = true
     },
@@ -197,11 +198,12 @@ const cartSlice = createSlice({
       state.isLoading = false
       toast.error(payload)
     },
-    // =========OnlineOrder========
+    // =========OnlineOrder get========
     [getallOnlineOrderThunk.pending]: (state, { payload }) => {
       state.isLoading = true
     },
     [getallOnlineOrderThunk.fulfilled]: (state, { payload }) => {
+      state.customerOrdersData = payload.stripes
       state.isLoading = false
     },
     [getallOnlineOrderThunk.rejected]: (state, { payload }) => {
