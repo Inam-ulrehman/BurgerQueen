@@ -5,6 +5,7 @@ import CashOrderName from '../components/Cart/CashOrderName'
 import { useSelector } from 'react-redux'
 import styled from 'styled-components'
 import { Button } from '@mui/material'
+import CartIcon from '../components/Cart/CartIcon'
 
 const Cart = () => {
   const { cart, user } = useSelector((state) => state)
@@ -48,6 +49,7 @@ const Cart = () => {
           <Button variant='outlined' onClick={handleClickOpen}>
             Pay Cash
           </Button>
+          <CartIcon />
         </div>
       ) : null}
       <CartHolder />

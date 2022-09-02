@@ -2,11 +2,11 @@ import React from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 import { useEffect } from 'react'
-import CartHolder from '../components/Cart/CartHolder'
 import { getCartItems } from '../features/cart/cartSlice'
 import styled from 'styled-components'
 import { formatPrice } from '../utils/helper'
 import { toast } from 'react-toastify'
+import Cart from './Cart'
 
 const SingleProducts = () => {
   const { products } = useSelector((state) => state.product)
@@ -93,7 +93,7 @@ const SingleProducts = () => {
         })}
       </div>
       {/* ==================Cart Holder============ */}
-      <CartHolder />
+      <Cart />
     </Wrapper>
   )
 }

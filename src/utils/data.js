@@ -7,7 +7,6 @@ import {
 } from 'react-icons/ai'
 import { CgMenuOreos } from 'react-icons/cg'
 import { FaUserTie, FaPhoneAlt, FaInstagramSquare } from 'react-icons/fa'
-import { IoMdCart } from 'react-icons/io'
 
 // ======Data for navbar=========Start
 
@@ -15,29 +14,24 @@ export const navbarData = [
   { id: 1, path: '/', title: 'Home', icon: <AiOutlineHome /> },
 
   {
-    id: 3,
+    id: 2,
     path: '/products',
     title: 'Menu',
     icon: <CgMenuOreos />,
   },
-  { id: 5, path: '/cart', title: 'Cart', icon: <IoMdCart /> },
-  { id: 4, path: '/user', title: 'SignUp', icon: <FaUserTie /> },
-
-  { id: 2, path: '/contact', title: 'ContactUS', icon: <FaPhoneAlt /> },
+  { id: 3, path: '/user', title: 'SignUp', icon: <FaUserTie /> },
+  { id: 4, path: '/contact', title: 'ContactUS', icon: <FaPhoneAlt /> },
 ]
 export const navbarMemberData = [
   { id: 1, path: '/', title: 'Home', icon: <AiOutlineHome /> },
-
   {
-    id: 3,
+    id: 2,
     path: '/products',
     title: 'Menu',
     icon: <CgMenuOreos />,
   },
-  { id: 5, path: '/cart', title: 'Cart', icon: <IoMdCart /> },
-  { id: 4, path: '/user', title: 'DashBoard', icon: <FaUserTie /> },
-
-  { id: 2, path: '/contact', title: 'ContactUS', icon: <FaPhoneAlt /> },
+  { id: 3, path: '/user', title: 'DashBoard', icon: <FaUserTie /> },
+  { id: 4, path: '/contact', title: 'ContactUS', icon: <FaPhoneAlt /> },
 ]
 
 // ======Data for navbar=========End

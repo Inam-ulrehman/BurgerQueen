@@ -17,6 +17,7 @@ import Logo from '../Logo'
 import { NavLink } from 'react-router-dom'
 import styled from 'styled-components'
 import { useSelector } from 'react-redux'
+import CartIcon from '../Cart/CartIcon'
 
 const drawerWidth = 280
 
@@ -61,6 +62,9 @@ function DrawerAppBar(props) {
   return (
     <Wrapper>
       <Box sx={{ display: 'flex' }}>
+        <div className='cartIcon'>
+          <CartIcon />
+        </div>
         <AppBar component='nav'>
           <Toolbar>
             <IconButton
@@ -79,7 +83,9 @@ function DrawerAppBar(props) {
             >
               <Logo />
             </Typography>
-            <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
+            <Box
+              sx={{ display: { xs: 'none', sm: 'block' }, marginRight: '1rem' }}
+            >
               {(isUserTrue ? navbarMemberData : navbarData).map((item) => {
                 return (
                   <NavLink key={item.id} to={item.path}>
@@ -119,6 +125,25 @@ function DrawerAppBar(props) {
 const Wrapper = styled.div`
   .MuiToolbar-root {
     min-height: 64px;
+  }
+  .cartIcon {
+    z-index: 2000;
+    position: fixed;
+    background: white;
+    padding: 0;
+    border-radius: var(--radius);
+    top: 18px;
+    right: 6px;
+
+    button,
+    p {
+      padding: 0px;
+      margin-right: auto;
+      display: flex;
+      justify-content: flex-start;
+      min-width: fit-content;
+      font-size: large;
+    }
   }
 `
 export default DrawerAppBar

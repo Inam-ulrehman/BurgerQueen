@@ -15,10 +15,9 @@ const initialState = {
 export const postReviewThunk = createAsyncThunk(
   'reviews/postReviewThunk',
   async (review, thunkAPI) => {
-    console.log(review)
     try {
       const resp = await customFetchReview.post('reviews', review)
-      console.log(resp.data)
+
       return resp.data
     } catch (error) {
       console.log(error.response)
