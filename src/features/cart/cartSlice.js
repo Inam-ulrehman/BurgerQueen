@@ -203,7 +203,7 @@ const cartSlice = createSlice({
       state.isLoading = true
     },
     [getallOnlineOrderThunk.fulfilled]: (state, { payload }) => {
-      state.customerOrdersData = payload.stripes
+      state.customerOrdersData = payload.stripes.reverse()
       state.isLoading = false
     },
     [getallOnlineOrderThunk.rejected]: (state, { payload }) => {

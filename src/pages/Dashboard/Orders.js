@@ -5,6 +5,8 @@ import styled from 'styled-components'
 import { getallOnlineOrderThunk } from '../../features/cart/cartSlice'
 import { Link } from 'react-router-dom'
 import { Button } from '@mui/material'
+import OrderDetails from '../../components/Orders/OrderDetails'
+import OrderItems from '../../components/Orders/OrderItems'
 
 const Orders = () => {
   const { customerOrdersData, isLoading } = useSelector((state) => state.cart)
@@ -42,28 +44,8 @@ const Orders = () => {
 
         return (
           <div className='container' key={item._id}>
-            <div className='item box-1'>
-              {item.name} Id: {item._id} <p>create date {item.createdAt}</p>
-              <p>{item.total}</p>
-            </div>
-            {/* Order has one item value */}
-            {cart.length === 1
-              ? cart.map((item, index) => (
-                  <div className='singleCart box-2' key={index}>
-                    <p>{item.name}</p>
-                    <img style={{ width: '300px' }} src={item.image} alt='' />
-                  </div>
-                ))
-              : null}
-            {/* Order has more then one value */}
-            {cart.length > 1
-              ? cart.map((item, index) => (
-                  <div className='multiCart box-3' key={index}>
-                    {item.name}
-                    <img style={{ width: '300px' }} src={item.image} alt='' />
-                  </div>
-                ))
-              : null}
+            <OrderDetails item={item} />
+            <OrderItems cart={cart} />
           </div>
         )
       })}
@@ -72,10 +54,19 @@ const Orders = () => {
 }
 
 const Wrapper = styled.div`
-  border: 5px solid pink;
+  padding: 1rem;
   .container {
-    border: 5px solid gray;
-    margin: 5px;
+    box-shadow: var(--shadow-1);
+    margin: 10px;
+    display: inline-flex;
+    flex-wrap: wrap;
+
+    justify-content: center;
+  }
+
+  .box-3,
+  .box-2 {
+    border: 5px solid var(--primary-9);
   }
 `
 
