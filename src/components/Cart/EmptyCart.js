@@ -12,7 +12,7 @@ const EmptyCart = () => {
       <img src={image} alt='' />
       <div className='btn-holder'>
         <Link className='btn' to='/products'>
-          Back to products
+          Back to Menu
         </Link>
       </div>
     </Wrapper>
