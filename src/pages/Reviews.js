@@ -1,8 +1,9 @@
-import { TextField } from '@mui/material'
+import { Button, TextField } from '@mui/material'
 import { useEffect } from 'react'
 import { React, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { Link, useParams } from 'react-router-dom'
+import { toast } from 'react-toastify'
 import styled from 'styled-components'
 import Stars from '../components/Cards/Stars'
 import ReviewHolder from '../components/Reviews/ReviewHolder'
@@ -25,7 +26,11 @@ const Reviews = () => {
   const handleSubmit = (e) => {
     const { name, reviewInput } = review
     e.preventDefault()
+    if (!name || !reviewInput) {
+      return toast.error('Please Provide Both Name and Review.')
+    }
     dispatch(postReviewThunk({ productId, starValue, name, reviewInput }))
+    dispatch(getReviewThunk(productId))
     setValue(!value)
   }
   // onChange value
@@ -46,15 +51,15 @@ const Reviews = () => {
     <Wrapper>
       <h1 className='title'>
         Customer <span>/ Review's</span>
-        <Link
-          className='btn-hipster'
-          to={`/products/${params.type}/${params.singleProduct}`}
-        >
-          Go back
-        </Link>
       </h1>
+      <Link
+        style={{ width: 'fit-content' }}
+        to={`/products/${params.type}/${params.singleProduct}`}
+      >
+        <Button variant='outlined'>Go Back</Button>
+      </Link>
 
-      <form className='form' onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit}>
         <TextField
           fullWidth={true}
           type='text'
@@ -80,16 +85,24 @@ const Reviews = () => {
           onChange={handleChange}
         />
 
-        <button className='btn' type='submit'>
+        <Button variant='outlined' className='btn' type='submit'>
           Submit
-        </button>
+        </Button>
       </form>
       <ReviewHolder review={review} />
     </Wrapper>
   )
 }
 const Wrapper = styled.article`
-  margin-top: 64px;
+  min-height: 100vh;
+  display: grid;
+  justify-content: center;
+  padding: 0 1rem;
+  align-items: baseline;
+  gap: 1rem;
+  form {
+    max-width: var(--fixed-width);
+  }
   .title {
     span {
       color: var(--primary-5);
@@ -97,6 +110,12 @@ const Wrapper = styled.article`
   }
   .stars {
     margin: 1rem auto;
+    display: flex;
+    gap: 1rem;
+    width: fit-content;
+  }
+  @media (min-width: 600px) {
+    grid-template-columns: 1fr 1fr;
   }
 `
 

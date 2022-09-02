@@ -1,4 +1,5 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
+import { toast } from 'react-toastify'
 
 import { customFetchReview } from '../../utils/axios'
 
@@ -61,6 +62,9 @@ const reviewSlice = createSlice({
       state.isLoading = true
     },
     [postReviewThunk.fulfilled]: (state) => {
+      state.name = ''
+      state.reviewInput = ''
+      toast.success('We appreciate your feedBack.')
       state.isLoading = false
     },
     [postReviewThunk.rejected]: (state) => {

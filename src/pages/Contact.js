@@ -157,7 +157,6 @@ const Wrapper = styled.div`
 
   .container {
     display: grid;
-    justify-content: center;
     padding: 0px 1rem;
   }
   .box-1,

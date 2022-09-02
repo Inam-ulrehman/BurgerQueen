@@ -28,9 +28,14 @@ const Stars = ({ starValue }) => {
   )
 }
 const Wrapper = styled.div`
+  :hover {
+    cursor: pointer;
+  }
   .fa {
+    transition: var(--transition);
+    margin-right: 5px;
     :hover {
-      cursor: pointer;
+      transform: scale(1.2);
     }
   }
   .checked {

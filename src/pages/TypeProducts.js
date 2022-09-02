@@ -60,8 +60,9 @@ const Wrapper = styled.div`
 
   .btn {
     position: fixed;
-    top: 80%;
-    left: 80%;
+    top: 90%;
+    left: 70%;
+    min-width: 6rem;
     p {
       display: inline;
     }
