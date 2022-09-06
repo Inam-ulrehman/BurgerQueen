@@ -6,8 +6,8 @@ import {
   setCashOrderInLocalStorage,
   getCashOrderFromLocalStorage,
 } from '../../utils/localStorage'
-import axios from 'axios'
 import { toast } from 'react-toastify'
+import { customFetch } from '../../utils/axios'
 
 // getCashOrderFromLocalStorage() ||getCashOrderFromLocalStorage() ||
 const initialState = {
@@ -27,10 +27,7 @@ export const postCashOrderThunk = createAsyncThunk(
   async (order, thunkApi) => {
     console.log(order)
     try {
-      const response = await axios.post(
-        'https://burgerqueenbyinam.herokuapp.com/api/v1/cashorders',
-        order
-      )
+      const response = await customFetch.post('/cashOrders', order)
       console.log(response.data)
       return response.data
     } catch (error) {
@@ -43,8 +40,6 @@ export const postCashOrderThunk = createAsyncThunk(
 export const postOnlineOrderThunk = createAsyncThunk(
   'cart/postOnlineOrderThunk',
   async (paymentDetails, thunkAPI) => {
-    console.log(paymentDetails)
-
     try {
       const token = thunkAPI.getState().user.user.token
       const name = thunkAPI.getState().user.user.name
@@ -52,8 +47,8 @@ export const postOnlineOrderThunk = createAsyncThunk(
       const total = thunkAPI.getState().cart.total
       const { payment_intent, payment_intent_client_secret, redirect_status } =
         paymentDetails
-      const response = await axios.post(
-        'https://burgerqueenbyinam.herokuapp.com/api/v1/stripes',
+      const response = await customFetch.post(
+        '/stripes',
         {
           name,
           total,
@@ -84,14 +79,11 @@ export const getallOnlineOrderThunk = createAsyncThunk(
     try {
       const token = thunkAPI.getState().user.user.token
 
-      const response = await axios.get(
-        'https://burgerqueenbyinam.herokuapp.com/api/v1/stripes',
-        {
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
-        }
-      )
+      const response = await customFetch.get('/stripes', {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      })
 
       return response.data
     } catch (error) {

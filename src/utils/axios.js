@@ -1,5 +1,9 @@
 import axios from 'axios'
 
+// =========Main Root URL =========//
+export const customFetch = axios.create({
+  baseURL: 'https://burgerqueenbyinam.herokuapp.com/api/v1',
+})
 // === Products Root Url ===//
 
 const customFetchProducts = axios.create({

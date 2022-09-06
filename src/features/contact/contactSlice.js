@@ -1,6 +1,6 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
-import axios from 'axios'
 import { toast } from 'react-toastify'
+import { customFetch } from '../../utils/axios'
 
 const initialState = {
   name: '',
@@ -15,13 +15,9 @@ export const contactThunk = createAsyncThunk(
   'contact/contactThunk',
   async (contact, thunkAPI) => {
     try {
-      const response = await axios.post(
-        'https://burgerqueenbyinam.herokuapp.com/api/v1/contactus',
-        contact
-      )
+      const response = await customFetch.post('contactUs', contact)
       return { ...response.data }
     } catch (error) {
-      console.log(error.response)
       return thunkAPI.rejectWithValue(error.response.data.msg)
     }
   }
