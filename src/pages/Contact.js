@@ -42,7 +42,7 @@ const Contact = () => {
     <Wrapper>
       <Helmet>
         <title>Contact Us</title>
-        <meta name='description' title='We are here 24/7 for our clients.' />
+        <meta name='description' title='We are here 24/7 for  clients.' />
         <link rel='canonical' href='/Contact' />
       </Helmet>
       <h1 className='title '>
