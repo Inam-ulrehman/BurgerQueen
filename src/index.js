@@ -8,6 +8,7 @@ import App from './App'
 import { Provider } from 'react-redux'
 import store from './store'
 import { theme } from './components/theme/theme'
+import { HelmetProvider } from 'react-helmet-async'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
@@ -15,7 +16,9 @@ root.render(
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <Provider store={store}>
-        <App />
+        <HelmetProvider>
+          <App />
+        </HelmetProvider>
       </Provider>
     </ThemeProvider>
   </React.StrictMode>

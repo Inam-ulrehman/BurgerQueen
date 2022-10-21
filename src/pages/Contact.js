@@ -9,6 +9,7 @@ import {
 import { toast } from 'react-toastify'
 import TextField from '@mui/material/TextField'
 import Button from '@mui/material/Button'
+import { Helmet } from 'react-helmet-async'
 
 const Contact = () => {
   const dispatch = useDispatch()
@@ -39,6 +40,11 @@ const Contact = () => {
   }, [])
   return (
     <Wrapper>
+      <Helmet>
+        <title>Contact Us</title>
+        <meta name='description' title='We are here 24/7 for our clients.' />
+        <link rel='canonical' href='/Contact' />
+      </Helmet>
       <h1 className='title '>
         Contact <span className='span'> / Us</span>
       </h1>

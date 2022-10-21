@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react'
+import { Helmet } from 'react-helmet-async'
 import styled from 'styled-components'
 import UserInputHolder from '../components/InputHolder/UserInputHolder'
 import login from '../images/login.svg'
@@ -8,19 +9,26 @@ const User = () => {
     window.scrollTo({ top: 0, left: 0, behavior: 'auto' })
   }, [])
   return (
-    <Wrapper className='api-box'>
-      <h1 className='title'>
-        Member <span>/ Area</span>
-      </h1>
-      <div className='container'>
-        <div className='box-2'>
-          <img src={login} alt='' />
+    <>
+      <Helmet>
+        <title>Sign up</title>
+        <meta name='description' title='Be our member for promotions.' />
+        <link rel='canonical' href='/user' />
+      </Helmet>
+      <Wrapper className='api-box'>
+        <h1 className='title'>
+          Member <span>/ Area</span>
+        </h1>
+        <div className='container'>
+          <div className='box-2'>
+            <img src={login} alt='' />
+          </div>
+          <div className='box-1'>
+            <UserInputHolder />
+          </div>
         </div>
-        <div className='box-1'>
-          <UserInputHolder />
-        </div>
-      </div>
-    </Wrapper>
+      </Wrapper>
+    </>
   )
 }
 const Wrapper = styled.div`
